@@ -1,15 +1,4 @@
-/*
-Colors
-Primary Blue: #036cb6
-Primary Teal: #38939b
-Primary Gray: #555a5a
-
-Secondary Blue: #0d66a1
-Secondary Purple: #6b699e
-Secondary Green: #8dc63f
-Secondary Orange: #e98a41
-Secondary Red: #852432
-*/
+@charset "UTF-8";
 
 body {
 	background-image: -webkit-linear-gradient(#fcffff 0%, /* #ffffff 50%, */ #fcffff 100%);
@@ -29,7 +18,7 @@ body {
 }
 
 header {
-	background: url(../img/seal-trans.png) no-repeat center bottom;
+	background: url(../img/sm-seal.png) no-repeat center bottom;
 	padding: 2.25em 0 2em;
 	margin: 2% 0 4%;
 	background-size: contain;
@@ -51,6 +40,75 @@ a:after {content: ' »'}
 
 a:hover {color: rgba(3, 108, 182, .7)}
 
+
+.rs-arrows a:after, .rs-thumb-wrap a:after, .rs-slider li a:after {
+	content: none;
+}
+
+.rs-arrows a {
+	background-color: rgba(3, 108, 182, .8);
+
+}
+.rs-arrows a:hover {
+	background-color: rgba(3, 108, 182, 1.0);
+	
+}
+
+#upper {
+	width: 70%;
+}
+.rs-caption {
+background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+padding: 1.5em 1em;}
+
+.rs-thumb-wrap a.active {
+transform: scale(1, 1);
+/*Firefox*/
+-moz-transform: scale(1, 1);
+/*Microsoft Internet Explorer*/
+-ms-transform: scale(1, 1);
+/*Chrome, Safari*/
+-webkit-transform: scale(1, 1);
+/*Opera*/
+-o-transform: scale(1, 1);
+}
+
+.rs-thumb-wrap a.hover {
+transform: scale(.95, .95);
+/*Firefox*/
+-moz-transform: scale(.95, .95);
+/*Microsoft Internet Explorer*/
+-ms-transform: scale(.95, .95);
+/*Chrome, Safari*/
+-webkit-transform: scale(.95, .95);
+/*Opera*/
+-o-transform: scale(.95, .95);
+}
+
+.rs-thumb-wrap a {
+transform: scale(0.9, 0.9);
+/*Firefox*/
+-moz-transform: scale(0.9, 0.9);
+/*Microsoft Internet Explorer*/
+-ms-transform: scale(0.9, 0.9);
+/*Chrome, Safari*/
+-webkit-transform: scale(0.9, 0.9);
+/*Opera*/
+-o-transform: scale(0.9, 0.9);
+	
+}
+
+.rs-prev {
+left: 0;
+border-bottom-right-radius: 3px;
+border-top-right-radius: 3px;
+}
+
+.rs-next {
+	right: 0;
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+}
 p {
 	font-weight: 400; 
 	font-size: 1.1em; 
@@ -265,7 +323,7 @@ font-family: 'Trade Gothic W01 Bold';
 
 
 .icon-remove:before {
-	content: "\e00f";
+	content: '\e00f';
 }
 
 .btn-5 {
@@ -444,7 +502,7 @@ font-family: 'Trade Gothic W01 Bold';
 	right: 10%;
 }
 .icon-arrow-right:before {
-	content: "▶";
+	content: '▶';
 	color: rgba(0,0,0, .3);
 	text-align: right;
 	right: 8%
@@ -795,6 +853,27 @@ font-family: 'Trade Gothic W01 Bold';
 
 .meta {color: #777; font-size: .8em; border: 1px solid #eee; border-radius: 3px; padding: .25em .5em; display: inline-block;}
 
+.rs-slider > li img {
+	width: 100%;
+}
+
+.rs-thumb-wrap a {
+	border: 5px solid #eee;
+}
+
+.rs-thumb-wrap a.active {	
+	border: 5px solid rgba(3, 108, 182,.2)
+}
+
+.rs-thumb-wrap a:hover {
+	border: 5px solid rgba(3, 108, 182,1);
+}
+
+
+#upper {
+	margin: auto;
+}
+
 /* a:after {content: ' »'} */
 .nl-form {
 	width: 100%;
@@ -907,7 +986,7 @@ font-family: 'Trade Gothic W01 Bold';
 	background: rgba(0,0,0,0.05);
 }
 
-.no-touch .nl-dd ul li:hover:before {	content: "▶";
+.no-touch .nl-dd ul li:hover:before {	content: '▶';
 	position: absolute;
 	right: 1em;
 	font-size: 50%;
@@ -932,7 +1011,7 @@ font-family: 'Trade Gothic W01 Bold';
 
 .nl-dd ul li.nl-dd-checked:before {
 /*
-	content: "▶";
+	content: '▶';
 	position: absolute;
 	right: 1em;
 	font-size: 50%;
@@ -964,7 +1043,7 @@ font-family: 'Trade Gothic W01 Bold';
 }
 
 .nl-field-go:before {
-	content: "\e001";
+	content: '\e001';
 	font-size: 75%;
 	color: #fff;
 	width: 100%;
@@ -1033,7 +1112,7 @@ input:focus::-ms-input-placeholder {
 }
 
 .nl-submit:before {
-	content: "\e001";
+	content: '\e001';
 	color: #fff;
 	float: left;
 	padding: 0 0.7em;
@@ -1097,7 +1176,21 @@ input:focus::-ms-input-placeholder {
 	-webkit-font-smoothing: antialiased;
 }
 .icon-search:before {
-	content: "\e000";
+	content: '\e000';
 }
 
 footer {text-align: center;}
+
+/* =Clearfix (all browsers)
+--------------------------------*/
+.group:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+/* IE6 */ 
+* html .group {height: 1%;}
+/* IE7 */
+*:first-child+html .group {min-height: 1px;}

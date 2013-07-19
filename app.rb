@@ -22,7 +22,7 @@ class App < Sinatra::Base
   end
 
   get "/" do
-    erb :index
+    erb :collage
   end
 
   get "/stylesheets/*.css" do |path|
