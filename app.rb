@@ -24,6 +24,10 @@ class App < Sinatra::Base
   get "/" do
     erb :index
   end
+  
+    get "/element-collage" do
+    erb :collage
+  end
 
   get "/stylesheets/*.css" do |path|
     content_type "text/css", charset: "utf-8"
