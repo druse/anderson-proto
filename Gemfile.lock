@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     addressable (2.3.2)
     chunky_png (1.2.6)
@@ -9,7 +9,6 @@ GEM
       fssm (>= 0.2.7)
       sass (~> 3.1)
     daemons (1.1.9)
-    dalli (2.6.4)
     eventmachine (0.12.10)
     excon (0.16.1)
     fssm (0.2.9)
@@ -23,7 +22,6 @@ GEM
       excon (~> 0.16.1)
     launchy (2.1.2)
       addressable (~> 2.3)
-    memcachier (0.0.2)
     method_source (0.8)
     mime-types (1.19)
     modular-scale (1.0.2)
@@ -66,9 +64,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dalli
   heroku
-  memcachier
   pry
   shotgun
   sinatra (~> 1.3)
