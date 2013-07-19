@@ -25,7 +25,7 @@ class App < Sinatra::Base
     erb :index
   end
   
-    get "/element-collage" do
+    get "/collage" do
     erb :collage
   end
 
