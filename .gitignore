@@ -1,0 +1,20 @@
+# SASS generated files #
+########################
+.sass-cache/*
+
+# Fire.app ganerated #
+######################
+fire_app_log.txt
+build_*/*
+build_sanmateo
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
