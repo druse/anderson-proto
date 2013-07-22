@@ -29,9 +29,9 @@ body {
 }
 
 header {
-	background: url(../img/sm-seal.png) no-repeat center bottom;
+	background: url(/images/sm-seal.png) no-repeat center bottom;
 	padding: 2.25em 0 2em;
-	margin: 2% 0 4%;
+	margin: 2% 0 7%;
 	background-size: contain;
 }
 
@@ -176,6 +176,7 @@ line-height: 1em;
 text-shadow: 0 2px 7px rgba(28, 104, 158, .3);
 font-family: 'Trade Gothic W01 Bold';
 font-weight: 300;
+visibility: hidden;
 }
 
 h1 span {
@@ -208,7 +209,7 @@ h2.tagline {
 	color: #38939b;
 	font-size: 2em;
 	font-family: 'Trade Gothic W01 Light';
-
+	visibility: hidden;
 }
 
 h2.tagline span {
