@@ -158,7 +158,7 @@ margin-bottom: 0;
 line-height: 1em;
 text-shadow: 0 2px 7px rgba(28, 104, 158, .3);
 font-family: 'Trade Gothic W01 Bold';
-
+font-weight: 300;
 }
 
 h1 span {
@@ -166,6 +166,7 @@ h1 span {
 	font-size: .5em; 
 	padding-right: .15em;
 	font-family: 'Trade Gothic W01 Roman';
+	font-weight: 300;
 }
 
 h2 {
@@ -174,13 +175,14 @@ h2 {
 	text-transform: uppercase;
 	padding-top: .86em;
 	font-family: 'Trade Gothic W01 Roman';
-
+	font-weight: 300;
 }
 
 h2 span {
 display: block; 
 color: #38939b; 
-	font-family: 'Trade Gothic W01 Roman';
+font-family: 'Trade Gothic W01 Roman';
+font-weight: 300;
 }
 
 h2.tagline {
@@ -188,7 +190,6 @@ h2.tagline {
 	margin-bottom: 3%;
 	color: #38939b;
 	font-size: 2em;
-	text-shadow: 0 2px 7px rgba(56, 147, 155, .2);
 	font-family: 'Trade Gothic W01 Light';
 
 }
@@ -211,7 +212,7 @@ h4 {
 	display: block;
 	line-height: 1.3em;
 	font-family: 'Trade Gothic W01 Roman';
-
+font-weight: 300;
 }
 
 h5 {
@@ -245,7 +246,8 @@ margin-right: 3%;
 -moz-transition: all 0.3s;
 transition: all 0.3s;
 font-family: 'Trade Gothic W01 Bold';
-
+font-weight: 300;
+font-size: 1.1em;
 }
 
 .btn:hover {
@@ -435,6 +437,8 @@ font-family: 'Trade Gothic W01 Bold';
 	box-shadow: none;
 	min-width: 240px;
 	text-align: left;
+	font-weight: 300;
+font-size: 1.1em;
 }
 
 .button:after {
@@ -470,13 +474,13 @@ font-family: 'Trade Gothic W01 Bold';
 	height: 100%;
 	left: 0;
 	top: 0;
-	line-height: 2.5;
+	line-height: 2.4;
 	font-size: 140%;
 	width: 60px;
 }
 
 .btn-3e {
-	padding: 1.1em 5.5em 1em 1.4em;
+	padding: 1.1em 5.5em 1em 1.2em;
 	overflow: hidden;
 }
 
@@ -533,8 +537,11 @@ font-family: 'Trade Gothic W01 Bold';
 }
 
 .seamless {padding: 0 0 0em;}
-.seamless h3,.seamless h4,.seamless h5 {padding: .5em; margin-bottom: 0;}
-.seamless h4 {background-color: white; margin-top: 0; padding-top: .75em; text-transform: uppercase; }
+.seamless h3,.seamless h4,.seamless h5 {
+padding: .5em; 
+margin-bottom: 0;
+}
+.seamless h4 {background-color: white; margin-top: 0; text-transform: uppercase; }
 .seamless img {
 	width: 100%;
 }
@@ -551,12 +558,6 @@ font-family: 'Trade Gothic W01 Bold';
 
 .seamless a {
 }
-
-/*
-.circle-mask {
-	 -webkit-mask-box-image: url(../img/circle-mask.svg);
-}
-*/
 
 .spotlight {
 	width: 25%;
@@ -694,15 +695,14 @@ width: 33%;}
 	transition: all 0.3s;
 	border-radius: 3px;
 	font-family: 'Trade Gothic W01 Roman';
-
+	font-weight: 300;
 }
 
 .search input[type=search]:focus {
 	box-shadow: none;
    	background-image: -webkit-linear-gradient(rgba(56, 147, 155, .7) 0%, rgba(56, 147, 155, .8) 100%);
-   	color: white;	font-family: 'Trade Gothic W01 Bold';
-
-
+   	color: white;	
+   	font-family: 'Trade Gothic W01 Bold';
 }
 
 .search input[type=search]:focus::-webkit-input-placeholder {
@@ -793,7 +793,9 @@ display: block;
 .event h3 {
 	float: left;
 	display: inline-block;
-	margin-bottom: 2%;
+	line-height: 1.1em;
+    margin-bottom: 3%;
+    width: 80%;
 }
 .event .meta {
 float: right;
@@ -809,6 +811,7 @@ float: right;
 
 .event .place, .event .time {
 	font-size: .85em;
+	margin-bottom: 3%;
 }
 .event > img {
 	float: right;
@@ -860,6 +863,7 @@ font-family: 'Trade Gothic W01 Bold';
 	color: white;
 	width: 100%;
 	text-align: center;
+	border-radius: 0;
 }
 
 
