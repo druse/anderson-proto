@@ -51,7 +51,7 @@ a.btn {
 }
 
 .main {
-	opacity: 0;
+	bottom: 0;
 	position: fixed;
 	background: rgba(0,0,0,.9);
 	display: block;
@@ -66,8 +66,7 @@ a.btn {
 }
 
 .hideme {
-	visibility: hidden;;
-	
+opacity: 0;	
 	ul {color: white; text-align: center; font-size: 1.5em; margin: 0; padding: .25em 0;}
 	}
 
