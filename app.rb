@@ -26,6 +26,10 @@ class App < Sinatra::Base
     erb :collage
   end
 
+get "/header" do
+erb :header, {:layout => :layoutproto}
+end 
+
   get "/stylesheets/*.css" do |path|
     content_type "text/css", charset: "utf-8"
     scss :"scss/#{path}"
