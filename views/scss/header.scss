@@ -38,6 +38,18 @@ h1 {
 
 h2 {}
 
+input[type=search] {
+	width: 85%;
+	float: left;
+}
+a.btn {
+	float: left;
+	width: 15%;
+	background-color: black;
+	text-align: center;
+	color: white;
+}
+
 .main {
 	bottom: 0;
 	position: fixed;
@@ -54,7 +66,7 @@ h2 {}
 }
 
 .hideme {
-	opacity: 0;
+	visibility: hidden;;
 	
 	ul {color: white; text-align: center; font-size: 1.5em; margin: 0; padding: .25em 0;}
 	}
