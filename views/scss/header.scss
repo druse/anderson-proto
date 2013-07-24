@@ -19,33 +19,47 @@ a {
 	color: $primaryBlue;
 }
 
-.county, .dept {
-/* 	background-color: $primaryBlue; */
+header {
+	background: -webkit-linear-gradient(#fafafa 0%, #ffffff 100%);
+	padding: .5em 0;
+}
+
+.county-brand, .dept-brand {
 	display: block;
-/* 	font-family: 'Trade Gothic W01 Bold'; */
-/* 	color: white; */
-/* 	padding: .5em; */
-/* 	text-transform: uppercase; */
-	padding: .5em;
+	font-family: 'Trade Gothic W01 Bold';
+	padding: 0 .5em;
+	text-transform: uppercase;
 }
 
 h1 {
-/* 	color: $primaryTeal; */
-/* 	font-family: 'Trade Gothic W01 Light'; */
-/* 	text-transform: uppercase; */
-	padding: .5em;
+	color: $primaryTeal;
+	font-family: 'Trade Gothic W01 Light';
+	text-transform: uppercase;
 }
 
 h2 {}
 
-input[type=search] {
-	width: 85%;
-	float: left;
+.county-name {
+	color: $primaryBlue;
+	font-size: 1.25em;
 }
+
+.county-name span {
+	font-size: .75em
+}
+.dept-name {
+	color: $primaryTeal;
+	font-family: 'Trade Gothic W01 Light';
+	font-size: 1.25em;
+	margin-bottom: 0;
+	line-height: 1em;
+	font-weight: 100;
+}
+
 a.btn {
 	float: left;
 	width: 15%;
-	background-color: black;
+	background-color: $primaryBlue;
 	text-align: center;
 	color: white;
 }
@@ -58,6 +72,11 @@ a.btn {
 	width: 100%;
 }
 
+.main:active {
+	width: 100%;
+	height: auto;
+	border-radius: 0;
+}
 .main nav li {
 	color: white;
 	text-align: left;
@@ -65,7 +84,7 @@ a.btn {
 a {
 	color: white; 
 	padding: .25em; 
-	height: 44px;}
+	min-height: 44px;}
 }
 
 .hideme {
@@ -74,6 +93,97 @@ opacity: 0;
 	}
 
 .content {display:none;}
+
+.btn {
+background-color: #036cb6;
+color: #f7f7f7;
+border-radius: 3px;
+padding: .75em 1em;
+text-transform: uppercase;
+font-size: 1.1em;
+display: inline-block;
+margin-right: 3%;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+font-family: 'Trade Gothic W01 Bold';
+font-weight: 300;
+/* font-size: 1.1em; */
+}
+
+.btn:hover {
+color: #fff;
+background-color:#38939b;
+}
+
+.search {
+	background-color: rgba(56, 147, 155, .2);
+	padding: .5em;
+	position: relative;
+	border-radius: 3px;
+	margin: 0 auto 5%;
+}
+
+.search input[type=search] {
+   	background-image: -webkit-linear-gradient(rgba(56, 147, 155, .3) 0%, rgba(56, 147, 155, .4) 100%);
+	border: none;
+	box-shadow: none;
+	color: white;
+	float: left;
+	width: 80%;
+	margin-right: 5%;
+	margin-bottom: 0;
+	font-size: 1em;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	border-radius: 3px;
+	font-family: 'Trade Gothic W01 Bold';
+	font-weight: 300;
+}
+
+.search input[type=search]:focus {
+	box-shadow: none;
+   	background-image: -webkit-linear-gradient(rgba(56, 147, 155, .7) 0%, rgba(56, 147, 155, .8) 100%);
+   	color: white;	
+   	font-family: 'Trade Gothic W01 Bold';
+}
+
+.search input[type=search]:focus::-webkit-input-placeholder {
+   color: white;
+}
+
+.search input[type=search]::-webkit-input-placeholder {
+   color: #036cb6;
+}
+
+.search input[type=search]:-moz-placeholder { /* Firefox 18- */
+   color: #036cb6;  
+}
+
+.search input[type=search]::-moz-placeholder {  /* Firefox 19+ */
+   color: #036cb6;  
+}
+
+.search input[type=search]:-ms-input-placeholder {  
+   color: #036cb6;  
+}
+
+.search .btn {
+	width: 15%;
+	float: left;
+	border: none;
+	display: block;
+	padding: .5em;
+	text-align: center;
+	margin-right: 0;
+	
+}
+
+.search .btn:after {
+	content: none;
+}
+
 
 @font-face {
 	font-family: 'SanMateoIcon';
