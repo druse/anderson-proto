@@ -31,7 +31,7 @@ body {
 header {
 	background: rgba(#eee, .3);
 	padding: 2em 2em 2em;
-	margin: 0 0 7%;
+	margin: 0 0 10%;
 	background-size: contain;
 }
 
@@ -801,7 +801,7 @@ width: 33%;}
 border-radius: 3px;
 background-color: white;
 border: 1px solid rgba(3, 108, 182, .1);
-width: 66%;
+width: 75%;
 position: relative;
 margin: 0 auto 10%;
 display: block;
@@ -1216,7 +1216,7 @@ input:focus::-ms-input-placeholder {
 	content: '\e000';
 }
 
-footer {text-align: center;}
+footer {text-align: center;margin: 5% 0;}
 
 /* =Clearfix (all browsers)
 --------------------------------*/
