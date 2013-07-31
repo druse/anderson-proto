@@ -297,6 +297,42 @@ header {
 .inner {
 	padding: .5em 1em 1.25em;
 	box-shadow: 0 3px 6px rgba($primaryGray, 0.1);
+	position: relative;
+}
+
+#dept-switch {
+	background-color: $primaryBlue;
+	padding: 1em;
+	display: none;
+	
+	.close {position: absolute; top: 1.5%; right: 3%; color: white; font-size: 1.5em;}
+	.close:hover {color: rgba(#fff, .5)}
+	
+	h2 {color: #014c80; padding: .25em; text-transform: uppercase;}
+	
+	ul {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		margin-bottom: 0;
+		
+		li {
+			a {
+				color: white;
+				font-weight: bold;
+				font-size: .8em;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+				padding: .25em .75em;
+				display: block;
+				border-radius: 3px;
+				position: relative;
+	}
+				
+			a:hover {background-color: rgba(#fff, .1)}
+			
+		}
+	}
 }
 
 .hideme {
@@ -363,35 +399,28 @@ h2 {
 	transition: all 0.3s;
 }
 
-/*
-.dept-name:after {
-    color: rgba($primaryTeal, .3);
-    padding-left: .25em;
-    font-family: 'SanMateoIcon';
-    content: "\e002";
-    font-size: .7em;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-    }
-
-.dept-name:hover:after{
-	color: rgba($primaryTeal, 1);
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+.dept-link {
+    background-color: rgba(56, 147, 155, 0.05);
+    border-radius: 3px;
+    color: $primaryBlue;
+    display: inline-block;
+    font-size: 0.75em;
+    margin-bottom: 5px;
+    padding: 0.5em 1em;
+    position: absolute;
+    right: 1.5%;
+    top: 0;
 }
-*/
 
 .search {
-	background-color: rgba($primaryTeal, .05);
-	padding: 1em .5em .75em;
-	border-radius: 3px;
-	margin: 0 auto 0%;
-	position: absolute;
-	top: 0;
-	right: 1.5%;
-	width: 30%;
+    background-color: rgba(56, 147, 155, 0.05);
+    border-radius: 3px;
+    margin: 0 auto 0;
+    padding: 0.5em;
+    position: absolute;
+    right: 1.5%;
+    top: 15%;
+    width: 30%;
 }
 
 .search input[type=search] {
@@ -456,12 +485,7 @@ h2 {
 	content: none;
 }
 
-.dept-link {
-	padding: .25em .25em;
-	font-size: .7em;
-	display: inline-block;
-	margin-top: 5px;
-}
+
 .icon-menu {
 	display: none;
 }
@@ -642,7 +666,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso{
+.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close {
 	font-family: 'SanMateoIcon';
 	speak: none;
 	font-style: normal;
@@ -667,3 +691,7 @@ you can use the generic selector below, but it's slower:
 .icon-arrow-down-iso:before {
 	content: "\e004";
 }
+.icon-close:before {
+	content: "\e005";
+}
+

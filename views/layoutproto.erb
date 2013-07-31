@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="stylesheets/app.css" />
 	<script src="javascripts/vendor/jquery.js"></script>
 	<script src="javascripts/foundation/modernizr.foundation.js"></script>
+		<script src="javascripts/showHide.js"></script>
+
 	<link rel="stylesheet" href="stylesheets/header.css">
 
 	<!-- IE Fix for HTML5 Tags -->
@@ -33,50 +35,25 @@
     MTIConfig.EnableCustomFOUTHandler = true // true = prevent FOUT
 	</script>
 	<script type="text/javascript" src="http://fast.fonts.net/jsapi/259f3181-2d3b-4389-baf3-501c5548670d.js"></script>
-<script src="javascripts/jquery.refineslide.js"></script>
-<!--
-  <script>
-        $(function () {
-            var $upper = $('#upper');
+<!-- <script src="javascripts/jquery.refineslide.js"></script> -->
+<script type="text/javascript">
 
-            $('#images').refineSlide({
-            	useArrows: true,
-                transition: 'fade',
-                maxWidth: 700,
-                transitionDuration:500, 
-                onInit : function () {
-                    var slider = this.slider,
-                       $triggers = $('.translist').find('> li > a');
+$(document).ready(function(){
 
-                    $triggers.parent().find('a[href="#_'+ this.slider.settings['transition'] +'"]').addClass('active');
 
-                    $triggers.on('click', function (e) {
-                       e.preventDefault();
+   $('.show_hide').showHide({			 
+		speed: 500,  // speed you want the toggle to happen	
+		easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+		changeText: 0, // if you dont want the button text to change, set this to 0
+		showText: 'View',// the button text to show when a div is closed
+		hideText: 'Close' // the button text to show when a div is open
+					 
+	}); 
 
-                        if (!$(this).find('.unsupported').length) {
-                            $triggers.removeClass('active');
-                            $(this).addClass('active');
-                            slider.settings['transition'] = $(this).attr('href').replace('#_', '');
-                        }
-                    });
 
-                    function support(result, bobble) {
-                        var phrase = '';
+});
 
-                        if (!result) {
-                            phrase = ' not';
-                            $upper.find('div.bobble-'+ bobble).addClass('unsupported');
-                            $upper.find('div.bobble-js.bobble-css.unsupported').removeClass('bobble-css unsupported').text('JS');
-                        }
-                    }
-
-                    support(this.slider.cssTransforms3d, '3d');
-                    support(this.slider.cssTransitions, 'css');
-                }
-            });
-        });
-    </script>
--->
+</script>
 </head>
 
 <body>
@@ -113,6 +90,7 @@
 <script>
 /* 	var nlform = new NLForm( document.getElementById( 'nl-form' ) ); */
 </script>
+<!--
 <script>
 $(document).ready(function() {
     
@@ -146,5 +124,6 @@ $(document).ready(function() {
     </script>
     	<script type="text/javascript" src="javascripts/jquery.flexnav.js"></script>
 	<script>$(".flexnav").flexNav();</script>
+-->
 </body>
 </html>
