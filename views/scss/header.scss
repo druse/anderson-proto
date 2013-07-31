@@ -12,12 +12,12 @@ $altRed: #852432;
 /* Media Queries */
 $papabear: 340px;
 
-
 @media only screen and (max-width: $papabear), only screen and (max-device-width: $papabear) {
 
 body {
 	margin: auto;
 /* 	max-width: 320px; */
+height: 1000px;
 }
 
 a {
@@ -110,10 +110,15 @@ a.btn {
 	color: white;
 	text-align: left;
 	
+	
 a {
 	color: white; 
 	padding: .25em; 
 	min-height: 44px;}
+}
+.home {display: none;}
+.main nav li ul {
+	display: none;
 }
 
 .hideme {
@@ -461,10 +466,21 @@ h2 {
 		color: $primaryBlue;
 	}
 	
+
+		.home a {}
+		
+		.home a:before {
+			content: "\e003";
+			font-family: 'SanMateoIcon';
+			text-indent: 0 !important;
+		}
+		
 	li {
 		float: left;
 		list-style-type: none;
+		position: relative;
 				
+		
 		a {
 			font-family: 'Trade Gothic W01 Roman', Helvetica Neue, Arial, Helvetica, sans-serif; 
 			font-size: 1.1em;
@@ -480,11 +496,71 @@ h2 {
 			color: white;
 			border-radius: 3px;
 		}
+		
+		a.sub-nav:hover {
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
+		
+		ul {
+			position: absolute;
+		    top: 45px;
+		    left: -20px;
+		    width: 300%;
+		 
+		    opacity: 0;
+		    background: rgba($primaryTeal, .9);
+		 
+		    -webkit-border-radius: 0 0 5px 5px;
+		    -moz-border-radius: 0 0 5px 5px;
+		    border-radius: 0 0 5px 5px;
+		 
+		    -webkit-transition: opacity .25s ease .1s;
+		    -moz-transition: opacity .25s ease .1s;
+		    -o-transition: opacity .25s ease .1s;
+		    -ms-transition: opacity .25s ease .1s;
+		    transition: opacity .25s ease .1s;
+		    
+		    li {
+			    height: 0;
+			    overflow: hidden;
+			    padding: 0;
+			    width: 100%;
+			    display: inline-table;
+			 
+			    -webkit-transition: height .25s ease .1s;
+			    -moz-transition: height .25s ease .1s;
+			    -o-transition: height .25s ease .1s;
+			    -ms-transition: height .25s ease .1s;
+			    transition: height .25s ease .1s;
+			    
+			    a {
+			    color: white;
+			    display: block;
+			    border-radius: 0;
+			    padding: .5em 1em;
+			    width: 100%;
+				}
+			}
+			
+			li:last-child a, li:last-child a:hover {
+				border-bottom-left-radius: 3px;
+				border-bottom-right-radius: 3px;
+			}
+		}
+			
+
 	}
 	
 	ul {margin-bottom: 0;}
 }
-
+		.primary li:hover > ul {
+			opacity: 1;}
+			
+		.primary li:hover > ul li {
+			height: 36px;
+			overflow: visible;
+			padding: 0;}
 .content {
 	display: inline !important;
 }
