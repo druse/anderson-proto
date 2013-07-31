@@ -312,7 +312,7 @@ header {
 	.close {position: absolute; top: 1.5%; right: 3%; color: white; font-size: 1.5em;}
 	.close:hover {color: rgba(#fff, .5)}
 	
-	h2 {color: #014c80; padding: .25em 0 .25em .25em; text-transform: uppercase;}
+	h2 {color: #014c80; padding: 0 .25em .25em .25em; text-transform: uppercase;}
 	
 	ul {
 		-webkit-column-count: 4;
@@ -328,7 +328,7 @@ header {
 				-moz-transition: all 0.3s;
 				transition: all 0.3s;
 				padding: .25em .75em;
-				display: block;
+				display: inline-block;
 				border-radius: 3px;
 				position: relative;
 	}
@@ -376,11 +376,12 @@ h1 {
 	padding: 0 0.2em 0 0.1em;
 }
 
+
 .county-name:hover {
-	background-image: none;
-	padding-left: 0;
+	color: rgba($primaryTeal, 1)
 }
 
+/*
 .county-name:hover:before {
 	font-family: 'SanMateoIcon';
     content: "\e003";
@@ -388,6 +389,7 @@ h1 {
     font-size: .85em;
     padding-right: .45em;
 }
+*/
 
 h2 {
 	color: $primaryTeal;
