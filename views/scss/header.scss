@@ -12,6 +12,64 @@ $altRed: #852432;
 /* Media Queries */
 $papabear: 340px;
 
+@font-face {
+	font-family: 'SanMateoIcon';
+	src:url('fonts/SanMateoIcon.eot');
+	src:url('fonts/SanMateoIcon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/SanMateoIcon.woff') format('woff'),
+		url('fonts/SanMateoIcon.ttf') format('truetype'),
+		url('fonts/SanMateoIcon.svg#SanMateoIcon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'SanMateoIcon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close {
+	font-family: 'SanMateoIcon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-mag-glass-02:before {
+	content: "\e000";
+}
+.icon-menu:before {
+	content: "\e001";
+}
+.icon-arrow-down:before {
+	content: "\e002";
+}
+.icon-home:before {
+	content: "\e003";
+}
+.icon-arrow-down-iso:before {
+	content: "\e004";
+}
+.icon-close:before {
+	content: "\e005";
+}
+
 @media only screen and (max-width: $papabear), only screen and (max-device-width: $papabear) {
 
 body {
@@ -28,6 +86,7 @@ a {
 		display: none;
 
 }
+/*
 .fold {
 	position: fixed;
 	bottom: 0;
@@ -37,9 +96,15 @@ a {
 	height: 44px;
 	background-color: #ccc;
 }
+*/
+
 
 header {
-	background: -webkit-linear-gradient(#fafafa 0%, #ffffff 100%);
+background-image: url(/images/uber-texture2.png), 
+-webkit-linear-gradient(#faffff 0%, /* #ffffff 50%, */ #fdffff 100%);
+	background-image: url(/images/uber-texture2.png), 
+-moz-linear-gradient(#faffff 0%, /* #ffffff 50%, */ #ffffff 100%);
+	border-top: 5px solid rgba($primaryBlue, .9);
 	padding: .5em 0;
 	margin-bottom: 10%;
 }
@@ -101,8 +166,11 @@ a.btn {
 	position: fixed;
 	background: rgba($primaryBlue, .95);
 	display: block;
-	width: 100%;
-	min-height: 44px;
+	width: 14%;
+	height: 9%;
+	margin: auto;
+	border-radius: 44px;
+	margin: 0 43%;
 }
 
 .main:active {
@@ -116,20 +184,40 @@ a.btn {
 	
 	
 a {
-	color: white; 
-	padding: .25em; 
-	min-height: 44px;}
+	color: white;
+	padding: .25em .75em;
+	min-height: 44px;
+	font-size: .8em;
+	border-bottom: 1px solid #014c80;
+	display: block;
+		font-family: 'Trade Gothic W01 Roman';
+}
 }
 .home {display: none;}
+
 .main nav li ul {
 	display: none;
 }
 
+.main.hideme.expander.expanded {
+    border-radius: 0 0 0 0;
+    height: auto;
+    left: 0;
+    width: 100%;
+    margin: 0;
+}
+.dept-link {
+	display: none;
+}
 .hideme {
 opacity: 0;	
-	ul {color: white; text-align: center; font-size: 1.5em; margin: 0; padding: .25em 0;}
-	}
 
+	ul {color: white; text-align: center; font-size: 1.5em; margin: 0; padding: .25em 0; }
+
+	}
+.main .icon-menu {-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;line-height: 1.25em;}
 .content {display:none;}
 
 .btn {
@@ -159,11 +247,12 @@ background-color:#38939b;
 	padding: .5em;
 	position: relative;
 	border-radius: 3px;
-	margin: 0 auto 5%;
+	margin: 0 auto;
 }
 
 .search input[type=search] {
-   	background-image: -webkit-linear-gradient(rgba(56, 147, 155, .3) 0%, rgba(56, 147, 155, .4) 100%);
+/*    	background-image: -webkit-linear-gradient(rgba(56, 147, 155, .3) 0%, rgba(56, 147, 155, .4) 100%); */
+background-color: white;
 	border: none;
 	box-shadow: none;
 	color: white;
@@ -176,7 +265,7 @@ background-color:#38939b;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 	border-radius: 3px;
-	font-family: 'Trade Gothic W01 Bold';
+	font-family: 'Trade Gothic W01 Roman';
 	font-weight: 300;
 }
 
@@ -215,7 +304,8 @@ background-color:#38939b;
 	padding: .55em;
 	text-align: center;
 	margin-right: 0;
-	
+	background-color: white;
+	color: $primaryBlue;
 }
 
 .search .btn:after {
@@ -223,51 +313,6 @@ background-color:#38939b;
 }
 
 
-@font-face {
-	font-family: 'SanMateoIcon';
-	src:url('fonts/SanMateoIcon.eot');
-	src:url('fonts/SanMateoIcon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/SanMateoIcon.woff') format('woff'),
-		url('fonts/SanMateoIcon.ttf') format('truetype'),
-		url('fonts/SanMateoIcon.svg#SanMateoIcon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-	font-family: 'SanMateoIcon';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-.icon-mag-glass-02, .icon-menu {
-	font-family: 'SanMateoIcon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-.icon-mag-glass-02:before {
-	content: "\e000";
-}
-.icon-menu:before {
-	content: "\e001";
-}
 
 }
 
@@ -523,7 +568,7 @@ h2 {
 		
 		a {
 			font-family: 'Trade Gothic W01 Roman', Helvetica Neue, Arial, Helvetica, sans-serif; 
-			font-size: 1.1em;
+			font-size: 1em;
 			padding: 0.5em .9em;
 			display: block;
 			-webkit-transition: all 0.3s;
@@ -643,62 +688,3 @@ background-color:#38939b;
 	display: none;
 }
 }
-
-@font-face {
-	font-family: 'SanMateoIcon';
-	src:url('fonts/SanMateoIcon.eot');
-	src:url('fonts/SanMateoIcon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/SanMateoIcon.woff') format('woff'),
-		url('fonts/SanMateoIcon.ttf') format('truetype'),
-		url('fonts/SanMateoIcon.svg#SanMateoIcon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-	font-family: 'SanMateoIcon';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close {
-	font-family: 'SanMateoIcon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-.icon-mag-glass-02:before {
-	content: "\e000";
-}
-.icon-menu:before {
-	content: "\e001";
-}
-.icon-arrow-down:before {
-	content: "\e002";
-}
-.icon-home:before {
-	content: "\e003";
-}
-.icon-arrow-down-iso:before {
-	content: "\e004";
-}
-.icon-close:before {
-	content: "\e005";
-}
-
