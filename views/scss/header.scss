@@ -107,6 +107,8 @@ a {
 	float: left;
 }
 
+strong {display: block;}
+
 .btn .icon-nav {
 	font-size: 1.5em;
 	float: right;
@@ -127,11 +129,12 @@ h2 {
 	font-weight: 100;
 }
 
-h3 {color: $primaryBlue; font-family: $bold; text-transform: uppercase;}
+h3 {color: $primaryTeal; font-family: $light; text-transform: uppercase; margin-top: 0; font-weight: 100;}
 
-h4 {color: $primaryTeal; font-family: $reg;}
+h4 {color: $primaryBlue; font-family: $reg;}
 
 h5 {color: $primaryBlue; font-family: $bold;}
+
 
 dl dd, dl dt {
 	margin-bottom: 0;
@@ -373,7 +376,11 @@ background-color: white;
 }
 
 .page-title {
-	padding-left: .25em;
+	font-size: 2em;
+	color: $primaryBlue;
+	padding: 0 0 .25em .4em;
+	margin-bottom: 1%;
+	text-transform: none;
 }
 .event-listing .main-content > h3{
 	padding-left: .5em;
@@ -947,7 +954,7 @@ font-size: .75em; border-radius: 3px; background-color: rgba($primaryGray, .05);
 
 .event-details {
 	float: left;
-	width: 70%;
+	width: 66%;
 	padding: 0em 1em 0;
 	min-height: 100px;
 	position: relative;
