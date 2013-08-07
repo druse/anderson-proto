@@ -80,9 +80,11 @@ you can use the generic selector below, but it's slower:
 body {
 	margin: auto;
 /* 	max-width: 320px; */
-	height: 1000px;
-	}
+	height: 100%;	}
 
+.wrapper {
+	overflow: hidden;
+}
 a {
 	color: $primaryBlue;
 }
@@ -319,11 +321,11 @@ background-color: white;
 }
 
 .main-body {
-	position: relative;
+/* 	position: relative; */
 }
 
 .event-listing .main-body header {
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 }
 
 .event-listing .main-body header h2 {
@@ -340,7 +342,10 @@ background-color: white;
 
 .date-filter {
 	margin-bottom: 0;
-}
+	
+		li label {font-weight: normal;}
+
+	}
 
 .event-filter {
 	display: none;
@@ -362,6 +367,7 @@ background-color: white;
 		color: white;
 		text-transform: uppercase;
 		margin-bottom: 5%;
+		width: 80%;
 	}
 	
 	label {
@@ -391,12 +397,16 @@ background-color: white;
 	border-top: 1px solid $primaryBlue;
 	padding: 1em 0;
 	
-	h4 {float: left; font-family: $bold; padding-left: .75em;}
+	h4 {float: left; font-family: $bold; padding-left: .75em; width: 80%;}
 	
 	.meta {font-size: .75em; border-top-left-radius: 3px; border-bottom-left-radius: 3px; background-color: rgba($primaryGray, .05); display: inline; border: 1px solid rgba($primaryGray, .2); padding: .25em .75em .25em .5em; float: right; color: $primaryGray;}
 	
 	img {
 		width: 100%;	
+	}
+	
+	dt, strong {
+		color: $primaryTeal;
 	}
 	
 	.event-sum {
@@ -430,11 +440,12 @@ background-color: white;
 
 footer {background-color: $primaryBlue;
 	width: 100%;
-	padding: 1em;
+	margin-bottom: 0;
+	border-top: 3px solid rgba($primaryBlue,.1);
 	
-	ul {
-		li { float: left;
-			a{color: white; display: block;}
+	ul { width: 100%; margin-bottom: 0;
+		li { float: left; list-style-type: none; width: 100%;
+			a{color: white; display: block; font-weight: bold; font-size: 1em; text-align: center; padding: .5em 0; border-bottom: 1px solid #014c80; min-height: 44px;}
 		}
 	}
 }
@@ -1017,7 +1028,8 @@ footer {background-color: $primaryBlue;
 	width: 100%;
 	padding: 1em;
 	margin-bottom: 0;
-	
+		border-top: 3px solid rgba($primaryBlue,.1);
+
 	ul { width: 100%; margin-bottom: 0;
 		li { float: left; list-style-type: none; width: 16%;
 			a{color: white; display: block; font-weight: bold; font-size: .75em; text-align: center;}
