@@ -46,7 +46,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close {
+.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close, .icon-subnav, .menu-button {
 	font-family: 'SanMateoIcon';
 	speak: none;
 	font-style: normal;
@@ -59,7 +59,7 @@ you can use the generic selector below, but it's slower:
 .icon-mag-glass-02:before {
 	content: "\e000";
 }
-.icon-menu:before {
+.icon-menu:before, .touch-button, .menu-button{
 	content: "\e001";
 }
 .icon-arrow-down:before {
@@ -73,6 +73,9 @@ you can use the generic selector below, but it's slower:
 }
 .icon-close:before {
 	content: "\e005";
+}
+.icon-subnav:before {
+	content: "\e006";
 }
 
 @media only screen and (max-width: $papabear), only screen and (max-device-width: $papabear) {
@@ -108,7 +111,14 @@ a {
 	width: 80%;
 	float: left;
 }
-
+.main-content {
+	padding: 0 1em;
+	
+	ul {padding-left: 2em; font-size: .9em;
+		
+		li {color: $altPurple}
+	}
+}
 strong {display: block;}
 
 .btn .icon-nav {
@@ -168,6 +178,9 @@ a.btn {
 	color: white;
 }
 
+.primary { color: navy;}
+
+.show {}
 .main {
 	bottom: 44px;
 	position: fixed;
@@ -200,6 +213,8 @@ a {
 	display: block;
 		font-family: 'Trade Gothic W01 Roman';
 }
+
+p {color: $primaryGray}
 }
 .home {display: none;}
 
@@ -250,6 +265,15 @@ a {
 .dept-link {
 	display: none;
 }
+.sub-link {
+	display: inline-block;
+float: right;
+padding: .5em .75em 0;
+font-size: 1.25em;
+width: 30%;
+text-align: right;
+}
+
 .hideme {
 opacity: 0;	
 
@@ -288,7 +312,7 @@ background-color:#38939b;
 	padding: .5em;
 	position: relative;
 	border-radius: 3px;
-	margin: 0 auto;
+	margin: 10px auto 0;
 }
 
 .search input[type=search] {
@@ -342,11 +366,11 @@ background-color:#38939b;
 	float: left;
 	border: none;
 	display: block;
-	padding: .55em;
+	padding: .285em;
 	text-align: center;
 	margin-right: 0;
-	background-color: white;
-	color: $primaryBlue;
+	background-color: $primaryBlue;
+	color: white;
 }
 
 .search .btn:after {
@@ -479,15 +503,113 @@ footer {background-color: $primaryBlue;
 	margin-bottom: 0;
 	border-top: 3px solid rgba($primaryBlue,.1);
 	
+	nav {
+	
 	ul { width: 100%; margin-bottom: 0;
 		li { float: left; list-style-type: none; width: 100%;
-			a{color: white; display: block; font-weight: bold; font-size: 1em; text-align: center; padding: .5em 0; border-bottom: 1px solid #014c80; min-height: 44px;}
+			a{color: white; display: block; font-weight: bold; font-size: 1em; text-align: center; padding: .5em 0; border-bottom: 1px solid #014c80; min-height: 44px; font-family: $reg}
+						a:hover {color: rgba(255,255,255, .8)}
+
+			}
 		}
 	}
 }
 
 
+/*
+.menu-button {
+    background: none repeat scroll 0 0 white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: #EF182E;
+    cursor: pointer;
+    display: block;
+    padding: 1em;
+    position: relative;
 }
+*/
+.menu-button {
+
+    float: right;
+    margin-bottom: 0;
+    margin-top: 0;
+}	
+@import "flexnav";
+
+
+.seamless {padding: 0 0 0em;}
+.seamless h3,.seamless h4,.seamless h5 {
+padding: .5em; 
+margin-bottom: 0;
+}
+/* .seamless h4 {background-color: white; margin-top: 0; text-transform: uppercase; } */
+.seamless img {
+	width: 100%;
+}
+.seamless p {
+	color: white;
+	padding: 0 1em .5em;
+	font-size: .85em;
+
+}
+.seamless h5 span {
+	display: block;
+	color: #ccc;
+}
+
+.seamless a {
+}
+
+.campaign {
+	background-color: #8dc63f;
+	border-radius: 3px;
+	margin-bottom: 5%;
+	
+	img {margin-bottom: 5%;}
+}
+
+.campaigns div:nth-child(2) {
+	background-color: #6b699e;
+}
+
+.campaigns div:last-child {
+	margin-right: 0;
+	background-color: #e98a41;
+}
+
+.campaign h4 {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 1.25em;
+}
+
+.campaign p {
+	color: #fafafa;
+	font-weight: bold;
+	font-size: .9em;
+}
+.btn-bar {
+	width: 100%;
+	background-color: rgba(255,255,255,.3);
+	display: block;
+	padding: 1em 0;
+	margin-bottom: 0;
+	color: white;
+font-family: 'Trade Gothic W01 Bold';
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.btn-bar:hover {
+	background-color: rgba(255,255,255,.2);
+	color: white;
+}
+
+.btn-bar:after {content: ' »';}
+
+
+	}
+
 
 @media all and (min-width: 340px) {
 
@@ -511,21 +633,24 @@ body {
 }
 .main-body {
 	padding: 0 2em;
+	margin-bottom: 5%;
 }
 
 .main-content {
-	width: 70%;
+	width: 60%;
 	float: left;
 }
 
 .sidebar {
 	float: left;
-	width: 25%;
-	margin-right: 5%;
-
+	width: 18%;
+	margin-right: 2.5%;
 }
 
-.filter-link, .main-body .close {
+.secondary {float: right; width: 17%; margin-left: 2.5%}
+
+
+.filter-link, .main-body .close, .sub-link {
 	display: none;
 }
 
@@ -555,7 +680,9 @@ strong {display: block;}
 
 a {color: $primaryBlue;}
 
-
+p {color: $primaryGray;}
+.main-content ul {padding-left: 2em; font-size: .9em}
+li {color: $altPurple; }
 .wrapper > header {
 /* 	border-bottom: 1px solid #fafafa; */
 /* 	box-shadow: 0 3px 3px rgba(0,0,0,.1); */
@@ -753,7 +880,7 @@ h2 {
 	float: left;
 	border: none;
 	display: block;
-	padding: .55em;
+	padding: .3em;
 	text-align: center;
 	margin-right: 0;
 	
@@ -891,29 +1018,28 @@ h2 {
 	border-radius: 3px;
 	font-family: $reg;
 	font-size: .85em;
+	border-top: 5px solid rgba($primaryBlue, .05);
 	
 	ul {margin: 0;padding: 0;
 	
 	li {margin: 0; padding: 0; list-style-type: none;
-		a {display: block; padding: .75em .75em; border-bottom: 1px solid rgba($primaryBlue, .2);	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-		a:hover {background-color: $primaryBlue; color: white;}
-
+		
+		a {display: block; padding: .75em .75em; border-bottom: 1px solid rgba($primaryBlue, .2);	-webkit-transition: all 0.3s;-moz-transition: all 0.3s; transition: all 0.3s;
+			}
+		a:hover {background-color: rgba($primaryBlue,.8); color: white;}
+		
 		}
-			
-			.active  {
-				font-family: $bold;
+		.active {font-family: $bold;
+		
 			a {background-color: $primaryBlue; color: white;}
 			
 			ul li {
-			
 			a {background-color: rgba($primaryTeal, .1); color: $primaryTeal; font-family: $reg; border-color: rgba($primaryTeal,.2)}
 			a:hover {background-color: rgba($primaryTeal, .2);}
-			}
+				}
 			}	
-}}
+		}
+	}
 
 .content {
 	display: inline !important;
@@ -1103,17 +1229,100 @@ border-radius: 3px;
 	}
 }
 
-footer {background-color: $primaryBlue;
+
+.seamless {padding: 0 0 0em;}
+.seamless h3,.seamless h4,.seamless h5 {
+padding: .5em; 
+margin-bottom: 0;
+}
+/* .seamless h4 {background-color: white; margin-top: 0; text-transform: uppercase; } */
+.seamless img {
 	width: 100%;
-	padding: 1em;
+}
+.seamless p {
+	color: white;
+	padding: 0 1em .5em;
+	font-size: .85em;
+
+}
+.seamless h5 span {
+	display: block;
+	color: #ccc;
+}
+
+.seamless a {
+}
+
+.campaign {
+	background-color: #8dc63f;
+	border-radius: 3px;
+	
+	img {margin-bottom: 5%;}
+}
+
+.campaigns div:nth-child(2) {
+	background-color: #6b699e;
+}
+
+.campaigns div:last-child {
+	margin-right: 0;
+	background-color: #e98a41;
+}
+
+.campaign h4 {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.campaign p {
+	color: #fafafa;
+	font-weight: bold;
+	font-size: .9em;
+}
+.btn-bar {
+	width: 100%;
+	background-color: rgba(255,255,255,.3);
+	display: block;
+	padding: 1em 0;
 	margin-bottom: 0;
-		border-top: 3px solid rgba($primaryBlue,.1);
+	color: white;
+font-family: 'Trade Gothic W01 Bold';
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.btn-bar:hover {
+	background-color: rgba(255,255,255,.2);
+	color: white;
+}
+
+.btn-bar:after {content: ' »';}
+
+footer { 
+	background: url("/images/footer-img-1.jpg") no-repeat scroll center bottom #036cb6;
+	background-size: cover;
+    border-top: 3px solid rgba(3, 108, 182, 0.1);
+    margin-bottom: 0;
+    padding: 5em 1em;
+    width: 100%;
 
 	ul { width: 100%; margin-bottom: 0;
 		li { float: left; list-style-type: none; width: 16%;
 			a{color: white; display: block; font-weight: bold; font-size: .75em; text-align: center;}
+			
+			a:hover {color: rgba(255,255,255, .8)}
 		}
 	}
 }
 
 }
+
+.touch-button {
+	display: none;
+}
+#mti_wfs_colophon {
+	display: none !important;
+}
+
+

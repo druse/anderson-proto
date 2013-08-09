@@ -5,7 +5,7 @@
 
 $nav_text: #ef182e;
 $top_level: #ffffff;
-$second_level: #eee;
+$second_level: rgba($primaryTeal, .1);
 $third_level: #bfbfbc;
 $fourth_level: #cbcbc9;
 
@@ -19,6 +19,10 @@ $fourth_level: #cbcbc9;
 	&.show {
 		@include transition(.4s);
 		max-height: 1000px;
+		position: fixed;
+		background-color: rgba(255,255,255,.95);
+		padding-top: 60px;
+		top: 0;
 	}
 	&.one-page {
 		position: fixed;
@@ -40,9 +44,10 @@ $fourth_level: #cbcbc9;
 		padding: .96em;
 		z-index: 2;
 		overflow: hidden;
-		color: $nav_text;
-		background: #fff;
+		color: white;
+		background: $primaryBlue;
 		border-bottom: 1px solid rgba(0,0,0,.15);
+		font-family: $reg;
 	}
 	li ul {
 		width: 100%;
@@ -54,10 +59,12 @@ $fourth_level: #cbcbc9;
 	}
 	li ul li a {
 		display: block;
-		background: $second_level;			
+		background: $second_level;	
+		color: $primaryTeal;		
 	}
 	ul li ul li a {
 		background: $third_level;
+		
 	}
 	ul li ul li ul li a {
 		background: $fourth_level;
@@ -70,8 +77,10 @@ $fourth_level: #cbcbc9;
 		width: 50px;
 		height: 50px;
 		display: inline-block;
+/*
 		background: #acaca1;
 		background: rgba(0,0,0,.05);
+*/
 		text-align: center;
 		border-radius: 6px;
 		&:hover {
@@ -79,20 +88,27 @@ $fourth_level: #cbcbc9;
 		}
 		.navicon {
 			position: relative;
-			top: 1em;
+			top: 1.25em;
 			font-size: 12px;
-			color: #ef182e;
+			color: rgba(#fff, .5);
 		}
 	}
 }
 .menu-button {
-	position: relative;
-	display: block;
-	padding: 1em;
-	background: $top_level;
-	color: $nav_text;
-	cursor: pointer;
-	border-bottom: 1px solid rgba(0,0,0,.2);
+position: fixed;
+display: block;
+padding: .3em;
+background: white;
+color: white;
+cursor: pointer;
+border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+background-color: $primaryBlue;
+font-size: 1.7em;
+text-align: center;
+top: .56em;
+right: .4em;
+border-radius: 3px;
+z-index: 9999;
 	
 	&.one-page {
 		position: fixed;
@@ -108,7 +124,7 @@ $fourth_level: #cbcbc9;
 		top: 0;
 		right: 0;
 		width: 50px;
-		height: 50px;
+		height: 100%;
 		display: inline-block;
 		text-align: center;
 				
@@ -116,7 +132,8 @@ $fourth_level: #cbcbc9;
 			font-size: 16px;
 			position: relative;
 			top: 1em;
-			color: #666;
+			color: rgba(#fff, .5);
+			display: none;
 		}
 	}
 }
