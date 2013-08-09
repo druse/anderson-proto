@@ -7,53 +7,77 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-
 	<!-- Set the viewport width to device width for mobile -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>San Mateo County</title>
-
 	<!-- Included CSS Files -->
 	<link rel="stylesheet" href="stylesheets/normalize.css" />
 	<link rel="stylesheet" href="stylesheets/app.css" />
 	<script src="javascripts/vendor/jquery.js"></script>
 	<script src="javascripts/foundation/modernizr.foundation.js"></script>
-		<script src="javascripts/showHide.js"></script>
-
+	<script src="javascripts/showHide.js"></script>
 	<link rel="stylesheet" href="stylesheets/header.css">
-
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<script type="text/javascript">
     // first, create the object that contains
     // configuration variables
     MTIConfig = {};
-
     // next, add a variable that will control
     // whether or not FOUT will be prevented
     MTIConfig.EnableCustomFOUTHandler = true // true = prevent FOUT
 	</script>
 	<script type="text/javascript" src="http://fast.fonts.net/jsapi/259f3181-2d3b-4389-baf3-501c5548670d.js"></script>
-<!-- <script src="javascripts/jquery.refineslide.js"></script> -->
-<script type="text/javascript">
+	<!-- <script src="javascripts/jquery.refineslide.js"></script> -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+		   $('.show_hide').showHide({			 
+				speed: 500,  // speed you want the toggle to happen	
+				easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+				changeText: 0, // if you dont want the button text to change, set this to 0
+				showText: 'View',// the button text to show when a div is closed
+				hideText: 'Close' // the button text to show when a div is open
+			}); 	
+		});
+	</script>
+<!--
+	<script>
+$(document).ready(function() {
+    var notScrolling = false;
 
-$(document).ready(function(){
-
-
-   $('.show_hide').showHide({			 
-		speed: 500,  // speed you want the toggle to happen	
-		easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-		changeText: 0, // if you dont want the button text to change, set this to 0
-		showText: 'View',// the button text to show when a div is closed
-		hideText: 'Close' // the button text to show when a div is open
-					 
-	}); 
-
-
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it */
+            if( bottom_of_window > bottom_of_object ) {
+                $(this).stop(true, true).fadeIn();
+            } else {
+                $(this).stop(true, true).fadeOut();
+            }
+            
+        });
+        
+        clearTimeout(notScrolling);
+        notScrolling = setTimeout(function() {
+            //do whatever to the elements when the scroll has stopped
+            $('.hideme').stop(true, true).fadeOut();
+        }, 500); // timeout uses milliseconds - this is 0.5seconds
+        
+       
+    });
+    
 });
 
 </script>
+-->
 </head>
 
 <body>
@@ -67,54 +91,12 @@ $(document).ready(function(){
   ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
   '.js><\/script>')
 </script>
-
-	<!-- Included JS Files (Uncompressed) -->
 <!--
-	<script src="javascripts/foundation/jquery.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.forms.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
-	<script src="javascripts/foundation/jquery.placeholder.js"></script>
+<script src="javascripts/nlform.js"></script>
+<script>
+	var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+</script>
 -->
-
-  <!-- Application Javascript, safe to override -->
-<!--   <script src="javascripts/foundation/app.js"></script> -->
-  <script src="javascripts/nlform.js"></script>
-<script>
-/* 	var nlform = new NLForm( document.getElementById( 'nl-form' ) ); */
-</script>
-<script>
-$(document).ready(function() {
-    
-    /* Every time the window is scrolled ... */
-    $(window).scroll( function(){
-    
-        /* Check the location of each desired element */
-        $('.hideme').each( function(i){
-            
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-                
-                $(this).animate({'opacity':'1'},500); /* ,'width':'100%' */
-                    
-            }
-            
-        }); 
-    
-    });
-    
-});
-</script>
 <script src="https://raw.github.com/redhotsly/simple-expand/master/src/simple-expand.min.js"></script>
     <script type="text/javascript">
         $(function () {
@@ -123,56 +105,5 @@ $(document).ready(function() {
     </script>
     	<script type="text/javascript" src="javascripts/jquery.flexnav.js"></script>
 	<script>$(".flexnav").flexNav();</script>
-	<script type="text/javascript" src="javascripts/jquery.calendario.js"></script>
-		<script type="text/javascript" src="javascripts/data.js"></script>
-		<script type="text/javascript">	
-			$(function() {
-			
-				var cal = $( '#calendar' ).calendario( {
-						onDayClick : function( $el, $contentEl, dateProperties ) {
-
-							for( var key in dateProperties ) {
-								console.log( key + ' = ' + dateProperties[ key ] );
-							}
-
-						},
-						caldata : codropsEvents
-					} ),
-					$month = $( '#custom-month' ).html( cal.getMonthName() ),
-					$year = $( '#custom-year' ).html( cal.getYear() );
-
-				$( '#custom-next' ).on( 'click', function() {
-					cal.gotoNextMonth( updateMonthYear );
-				} );
-				$( '#custom-prev' ).on( 'click', function() {
-					cal.gotoPreviousMonth( updateMonthYear );
-				} );
-				$( '#custom-current' ).on( 'click', function() {
-					cal.gotoNow( updateMonthYear );
-				} );
-
-				function updateMonthYear() {				
-					$month.html( cal.getMonthName() );
-					$year.html( cal.getYear() );
-				}
-
-				// you can also add more data later on. As an example:
-				/*
-				someElement.on( 'click', function() {
-					
-					cal.setData( {
-						'03-01-2013' : '<a href="#">testing</a>',
-						'03-10-2013' : '<a href="#">testing</a>',
-						'03-12-2013' : '<a href="#">testing</a>'
-					} );
-					// goes to a specific month/year
-					cal.goto( 3, 2013, updateMonthYear );
-
-				} );
-				*/
-			
-			});
-		</script>
-
 </body>
 </html>

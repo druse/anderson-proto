@@ -34,6 +34,10 @@ get "/events" do
 erb :eventsListing, {:layout => :layoutproto}
 end 
 
+get "/subnav" do
+erb :subnav, {:layout => :layoutproto}
+end 
+
   get "/stylesheets/*.css" do |path|
     content_type "text/css", charset: "utf-8"
     scss :"scss/#{path}"
