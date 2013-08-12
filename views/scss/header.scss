@@ -1043,7 +1043,7 @@ h2 {
 		}
 		.active {font-family: $bold;
 		
-			a {background-color: $primaryBlue; color: white;}
+			a {background-color: white; color: $primaryBlue;}
 			
 			ul li {
 			a {background-color: rgba($primaryTeal, .1); color: $primaryTeal; font-family: $reg; border-color: rgba($primaryTeal,.2)}
@@ -1314,9 +1314,9 @@ font-family: 'Trade Gothic W01 Bold';
 footer { 
 	background: url("/images/footer-img-1.jpg") no-repeat scroll center bottom #036cb6;
 	background-size: cover;
-    border-top: 3px solid rgba(3, 108, 182, 0.1);
+    border-top: 5px solid rgba($primaryTeal, .5);
     margin-bottom: 0;
-    padding: 5em 1em;
+    padding: 3em 2em;
     width: 100%;
 
 	.adr {
@@ -1327,11 +1327,11 @@ footer {
 		
 		li {color: white; list-style-type: none; font-size: .85em; font-weight: bold; padding-left: 5.5em; font-family: $bold; font-weight: 300;}
 	}
+
+	nav ul { width: 45%; float: right; margin-bottom: 0;
 	
-	nav ul { width: 75%; float: left; margin-bottom: 0;
-	
-		li { float: left; list-style-type: none; width: 16%;
-			a {color: white; display: block; font-weight: bold; font-size: .75em; text-align: center;}
+		li { float: left; list-style-type: none; width: 33%; margin-bottom: 2%;
+			a {color: white; display: block; font-weight: bold; font-size: .8em; }
 			a:hover {color: rgba(255,255,255, .8)}
 		}
 	}
