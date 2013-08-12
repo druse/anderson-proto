@@ -237,6 +237,7 @@ p {color: $primaryGray}
 	border-radius: 3px;
 	font-family: $reg;
 	font-size: .85em;
+	margin-bottom: 5%;
 	
 	ul {margin: 0;padding: 0;
 	
@@ -266,12 +267,14 @@ p {color: $primaryGray}
 	display: none;
 }
 .sub-link {
-	display: inline-block;
-float: right;
-padding: .5em .75em 0;
+display: inline-block;
+padding: .5em;
 font-size: 1.25em;
-width: 30%;
-text-align: right;
+text-align: center;
+background-color: rgba($primaryBlue, .1);
+border-radius: 3px;
+float: right;
+margin-right: 3.25%;
 }
 
 .hideme {
@@ -382,12 +385,12 @@ background-color:#38939b;
 }
 
 .event-listing .main-body header {
-	margin-bottom: 5%;
+	margin-bottom: 3%;
 }
 
 .event-listing .main-body header h2 {
 	float: left;
-	width: 70%;
+	width: 75%;
 }
 
 .filter-link {
@@ -503,7 +506,16 @@ footer {background-color: $primaryBlue;
 	margin-bottom: 0;
 	border-top: 3px solid rgba($primaryBlue,.1);
 	
-	nav {
+	.adr {
+		width: 70%;
+		background: url(/images/seal.png) no-repeat;
+		background-size: contain;
+		margin: 1em auto;
+		
+		li {color: white; list-style-type: none; font-size: .85em; font-weight: bold; padding-left: 5.5em; font-family: $bold; font-weight: 300;}
+	}
+	
+	nav { border-top: 1px solid  #014c80;
 	
 	ul { width: 100%; margin-bottom: 0;
 		li { float: left; list-style-type: none; width: 100%;
@@ -1307,10 +1319,19 @@ footer {
     padding: 5em 1em;
     width: 100%;
 
-	ul { width: 100%; margin-bottom: 0;
+	.adr {
+		float: left;
+		width: 25%;
+		background: url(/images/seal.png) no-repeat;
+		background-size: contain;
+		
+		li {color: white; list-style-type: none; font-size: .85em; font-weight: bold; padding-left: 5.5em; font-family: $bold; font-weight: 300;}
+	}
+	
+	nav ul { width: 75%; float: left; margin-bottom: 0;
+	
 		li { float: left; list-style-type: none; width: 16%;
-			a{color: white; display: block; font-weight: bold; font-size: .75em; text-align: center;}
-			
+			a {color: white; display: block; font-weight: bold; font-size: .75em; text-align: center;}
 			a:hover {color: rgba(255,255,255, .8)}
 		}
 	}
