@@ -36,7 +36,7 @@ $bold:'Trade Gothic W01 Bold', Helvetica Neue, Arial, Helvetica;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	line-height: 1;
+/* 	line-height: 1; */
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -46,14 +46,14 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close, .icon-subnav, .menu-button {
+.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close, .icon-subnav, .menu-button, .icon-eye, .icon-filter  {
 	font-family: 'SanMateoIcon';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	line-height: 1;
+/* 	line-height: 1; */
 	-webkit-font-smoothing: antialiased;
 }
 .icon-mag-glass-02:before {
@@ -77,6 +77,15 @@ you can use the generic selector below, but it's slower:
 .icon-subnav:before {
 	content: "\e006";
 }
+.icon-eye:before {
+	content: "\e007";
+	padding-right: 0.5em;
+}
+.icon-filter:before {
+	content: "\e008";
+}
+
+
 
 @media only screen and (max-width: $papabear), only screen and (max-device-width: $papabear) {
 
@@ -111,7 +120,8 @@ a {
 	width: 80%;
 	float: left;
 }
-.main-content {
+
+.details .main-content {
 	padding: 0 1em;
 	
 	ul {padding-left: 2em; font-size: .9em;
@@ -159,7 +169,8 @@ dl dd, dl dt {
 
 .county-name span {
 	font-size: .75em;
-	font-family: 'Trade Gothic W01 Roman';}
+	font-family: 'Trade Gothic W01 Roman';
+	padding: 0 0.15em 0 0.1em;}
 
 .dept-name {
 	color: $primaryTeal;
@@ -268,14 +279,17 @@ p {color: $primaryGray}
 }
 .sub-link {
 display: inline-block;
-padding: .5em;
-font-size: 1.25em;
+padding: .75em .5em;
+font-size: .7em;
 text-align: center;
 background-color: rgba($primaryBlue, .1);
 border-radius: 3px;
 float: right;
 margin-right: 3.25%;
+margin-top: 2%;
 }
+
+.sub-link:before {padding-right: .5em}
 
 .hideme {
 opacity: 0;	
@@ -384,13 +398,13 @@ background-color:#38939b;
 /* 	position: relative; */
 }
 
-.event-listing .main-body header {
+.main-body header {
 	margin-bottom: 3%;
 }
 
-.event-listing .main-body header h2 {
+.main-body header h2 {
 	float: left;
-	width: 75%;
+	width: 65%;
 }
 
 .filter-link {
@@ -451,7 +465,7 @@ background-color:#38939b;
 	margin-bottom: 1%;
 	text-transform: none;
 }
-.event-listing .main-content > h3{
+.main-content > h3 { 
 	padding-left: .5em;
 }
 
@@ -540,13 +554,12 @@ footer {background-color: $primaryBlue;
 }
 */
 .menu-button {
-
     float: right;
     margin-bottom: 0;
     margin-top: 0;
 }	
-@import "flexnav";
 
+@import "flexnav";
 
 .seamless {padding: 0 0 0em;}
 .seamless h3,.seamless h4,.seamless h5 {
@@ -669,7 +682,7 @@ body {
 .page-title {
 	font-size: 3em;
 	color: $primaryBlue;
-	border-bottom: 3px solid rgba($primaryBlue, .1);
+	border-bottom: 5px solid rgba($primaryBlue, .1);
 	padding: 0 0 .25em;
 	margin-bottom: 3%;
 	text-transform: none;
@@ -754,8 +767,11 @@ li {color: $altPurple; }
 }
 
 .lockup {
-	margin-bottom: 3%;
+	margin-bottom: 2%;
 	width: 65%;
+	background: url("/images/seal.png") no-repeat 0 -2px;
+	background-size: contain;
+	padding-left: 5.5em;
 }
 	
 .county-name, .dept-name {
@@ -775,8 +791,10 @@ h1 {
 	font-size: 2em;
 	line-height: 1em;
 	font-family: 'Trade Gothic W01 Bold';
+/*
 	background: url("/images/seal.png") no-repeat 0 -2px;
     padding-left: 1.35em;
+*/
     background-size: contain;
 }
 
@@ -817,26 +835,32 @@ h2 {
 }
 
 .dept-link {
-    background-color: rgba(56, 147, 155, 0.05);
-    border-radius: 3px;
-    color: $primaryBlue;
+    background-color: /* rgba(56, 147, 155, 0.05) */ rgba($primaryBlue,.9);
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+    color: white;
     display: inline-block;
     font-size: 0.8em;
     margin-bottom: 5px;
-    padding: 0.5em 1em;
+    padding: 0.4em .9em .8em;
     position: absolute;
-    right: .5%;
-    top: 110%;
+    right: 3%;
+    top: -1.3em;
+    }
+    
+.dept-link:hover {
+    color: rgba(white, .9);
+
 }
 
 .search {
-    background-color: rgba(56, 147, 155, 0.05);
+/*     background-color: rgba(56, 147, 155, 0.05); */
     border-radius: 3px;
     margin: 0 auto 0;
-    padding: 0.5em;
+/*     padding: 0.5em; */
     position: absolute;
-    right: 3%;
-    top: 5%;
+    right: 2.25%;
+    top: 24.5%;
     width: 30%;
 }
 
@@ -849,7 +873,8 @@ h2 {
 	width: 80%;
 	margin-right: 3%;
 	margin-bottom: 0;
-	font-size: 1em;
+	font-size: .85em;
+	padding: 1.45em .85em;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -1112,7 +1137,7 @@ display: block;
 	float: left;
 	display: inline-block;
 	line-height: 1.1em;
-    margin: .75em 0 0%;
+    margin: .75em 0 3%;
     width: 80%;
     font-family: $bold;
     color: $primaryBlue;
@@ -1139,7 +1164,7 @@ font-size: .75em; border-radius: 3px; background-color: rgba($primaryGray, .05);
 	float: right;
 	width: 100%;
 	max-width: 200px;
-	margin-bottom: 2%;
+/* 	margin-bottom: 2%; */
 }
 
 .event .event-sum {
