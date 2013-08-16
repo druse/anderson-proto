@@ -38,6 +38,10 @@ get "/subnav" do
 erb :subnav, {:layout => :layoutproto}
 end 
 
+get "/home" do
+erb :home, {:layout => :layoutproto}
+end 
+
   get "/stylesheets/*.css" do |path|
     content_type "text/css", charset: "utf-8"
     scss :"scss/#{path}"
