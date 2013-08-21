@@ -14,12 +14,12 @@ $babybear: 300px;
 $papabear: 340px;
 
 /* Fonts */
-$light: 'Trade Gothic W01 Light', Helvetica Neue, Arial, Helvetica;
-$reg: 'Trade Gothic W01 Roman', Helvetica Neue, Arial, Helvetica;
-$bold:'Trade Gothic W01 Bold', Helvetica Neue, Arial, Helvetica;
+$light: "Trade Gothic W01 Light", Helvetica Neue, Arial, Helvetica;
+$reg: "Trade Gothic W01 Roman", Helvetica Neue, Arial, Helvetica;
+$bold:"Trade Gothic W01 Bold", Helvetica Neue, Arial, Helvetica;
 
 @font-face {
-	font-family: 'SanMateoIcon';
+	font-family: "SanMateoIcon";
 	src:url('fonts/SanMateoIcon.eot');
 	src:url('fonts/SanMateoIcon.eot?#iefix') format('embedded-opentype'),
 		url('fonts/SanMateoIcon.woff') format('woff'),
@@ -31,7 +31,7 @@ $bold:'Trade Gothic W01 Bold', Helvetica Neue, Arial, Helvetica;
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
-	font-family: 'SanMateoIcon';
+	font-family: "SanMateoIcon";
 	content: attr(data-icon);
 	speak: none;
 	font-weight: normal;
@@ -48,7 +48,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 .icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close, .icon-subnav, .menu-button, .icon-eye, .icon-filter, .icon-info, .icon-link, .icon-phone, .icon-location   {
-	font-family: 'SanMateoIcon';
+	font-family: "SanMateoIcon";
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -3026,7 +3026,6 @@ border-top-right-radius: 0;}
 		margin-left: 0;
 		padding-left: 0em;
 margin-bottom: 5%;
-		.adr h5:before {content: "\e00c"; color: red; font-family: 'SanMateoIcon'}
 		> li {word-wrap: break-word; float: left; width: 40%; margin-right: 5%;padding-left: 0; color: $primaryGray;padding-bottom: 0;
 border-radius: 3px; font-size: .75em; margin-bottom: 5%;}
 		> li:last-child {margin-right: 0; width: 100%;}
@@ -3056,8 +3055,12 @@ border-radius: 3px; font-size: .75em; margin-bottom: 5%;}
 			}
 		
 			
-			li {list-style-type: none; color: $primaryGray;}
-			.adr {padding-left: 0; margin-left: 0;}
+			li {list-style-type: none; color: $primaryGray;
+								h5 {color: $primaryTeal; font-weight: 100;}
+
+			}
+			.adr {padding-left: 0; margin-left: 0;
+			}
 			.thumb {border: 5px solid rgba($primaryBlue, .05);float: left; border-radius: 3px; margin-right: 2%; margin-bottom: 0;}	
 			.content {
 			display: block;margin-bottom: 3%;
