@@ -40,7 +40,11 @@ end
 
 get "/home" do
 erb :home, {:layout => :layoutproto}
-end 
+end
+
+get "/search-results" do
+erb :searchResults, {:layout => :layoutproto}
+end
 
   get "/stylesheets/*.css" do |path|
     content_type "text/css", charset: "utf-8"
