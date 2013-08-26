@@ -35,7 +35,7 @@ erb :listingPage, {:layout => :layout}
 end 
 
 get "/detail" do
-erb :subnav, {:layout => :layout}
+erb :detail, {:layout => :layout}
 end 
 
 get "/home" do
