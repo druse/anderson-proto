@@ -7,33 +7,77 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-
 	<!-- Set the viewport width to device width for mobile -->
-	<meta name="viewport" content="width=device-width" />
-
-	<title>San Mateo County - Element Collage</title>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>San Mateo County</title>
 	<!-- Included CSS Files -->
 	<link rel="stylesheet" href="stylesheets/normalize.css" />
 	<link rel="stylesheet" href="stylesheets/app.css" />
 	<script src="javascripts/vendor/jquery.js"></script>
 	<script src="javascripts/foundation/modernizr.foundation.js"></script>
-	<link rel="stylesheet" href="stylesheets/collage.css">
-
+	<script src="javascripts/showHide.js"></script>
+	<link rel="stylesheet" href="stylesheets/style.css">
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<script type="text/javascript">
     // first, create the object that contains
     // configuration variables
     MTIConfig = {};
-
     // next, add a variable that will control
     // whether or not FOUT will be prevented
     MTIConfig.EnableCustomFOUTHandler = true // true = prevent FOUT
 	</script>
 	<script type="text/javascript" src="http://fast.fonts.net/jsapi/259f3181-2d3b-4389-baf3-501c5548670d.js"></script>
+	<!-- <script src="javascripts/jquery.refineslide.js"></script> -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+		   $('.show_hide').showHide({			 
+				speed: 500,  // speed you want the toggle to happen	
+				easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+				changeText: 0, // if you dont want the button text to change, set this to 0
+				showText: 'View',// the button text to show when a div is closed
+				hideText: 'Close' // the button text to show when a div is open
+			}); 	
+		});
+	</script>
+<!--
+	<script>
+$(document).ready(function() {
+    var notScrolling = false;
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it */
+            if( bottom_of_window > bottom_of_object ) {
+                $(this).stop(true, true).fadeIn();
+            } else {
+                $(this).stop(true, true).fadeOut();
+            }
+            
+        });
+        
+        clearTimeout(notScrolling);
+        notScrolling = setTimeout(function() {
+            //do whatever to the elements when the scroll has stopped
+            $('.hideme').stop(true, true).fadeOut();
+        }, 500); // timeout uses milliseconds - this is 0.5seconds
+        
+       
+    });
+    
+});
+
+</script>
+-->
 <script src="javascripts/jquery.refineslide.js"></script>
   <script>
         $(function () {
@@ -76,39 +120,125 @@
             });
         });
     </script>
+
 </head>
 
 <body>
+<div class="wrapper group">
+<div id="dept-switch">
+	<a class="close show_hide icon-close" href="" rel="#dept-switch"></a>
+	<h2>Departments</h2>
+	<ul class="group">
+			<li><a href="">Agriculture Weights and Measures</a></li>
+			<li><a href="">Assessor, County Clerk-Recorder &amp;&nbsp;Chief Elections Officer</a></li>
+			<li><a href="">Board of Supervisors</a></li>
+			<li><a href="">Child Support Services</a></li>
+			<li><a href="">Controller</a></li>
+			<li><a href="">Coroner</a></li>
+			<li><a href="">County Counsel</a></li>
+			<li><a href="">County Managers Office/Clerk of the Board</a></li>
+			<li><a href="">Courts</a></li>
+			<li><a href="">District Attorney</a></li>
+			<li><a href="">Fire Protection Services</a></li>
+			<li><a href="">Health System</a></li>
+			<li><a href="">Housing (Department of Housing)</a></li>
+			<li><a href="">Human Resources Department</a></li>
+			<li><a href="">Human Services Agency</a></li>
+			<li><a href="">Information Services Department</a></li>
+			<li><a href="">Parks Department</a></li>
+			<li><a href="">Planning and Building</a></li>
+			<li><a href="">Probation</a></li>
+			<li><a href="">Public Works</a></li>
+			<li><a href="">SamCERA (Retirement)</a></li>
+			<li><a href="">San Mateo County Library</a></li>
+			<li><a href="">Sheriff's Office</a></li>
+			<li><a href="">Tax Collector / Treasurer / Revenue Services</a></li>
+		</ul>
+</div>
 
-				<%= yield %>
+<header id="header" class="group">
+	<div class="inner">
+		<a class="dept-link show_hide icon-eye" rel="#dept-switch" href="">View All Departments</a>		
+		<div class="lockup group">
+			<a href=""><h2 class="county-name">County<span>of</span>San Mateo</h2></a>
+			<a href=""><h2 class="dept-name">Parks Department</h2></a>
+		</div>
+<!-- 		<a class="btn btn-nav" href=""><span class="icon-menu" aria-hidden="true"></span></a> -->
+		<div class="menu-button btn-nav icon-menu"></div>
+			<nav class="primary main-nav">
+			
+				<ul class="group flexnav">
+					<div class="search group section">
+						<input type="search" placeholder="Search All Departments..">
+						<a class="btn btn-5 btn-5a icon-remove" href=""><span class=" icon-mag-glass-02" aria-hidden="true"></span></a>
+					</div>
+
+					<li class="home"><a href=""></a></li>
+					<li><a href="">Activities</a></li>
+					<li><a class="sub-nav" href="">Parks</a>
+						<ul>
+							<li><a href="">Brochures</a></li>
+							<li><a href="">Facilities</a></li>
+							<li><a href="">Rules & Regulations</a></li>
+							<li><a href="">Be Aware</a></li>
+						</ul>
+					</li>
+					<li><a href="">Trails</a></li>
+					<li><a href="">Events</a></li>
+					<li><a href="">Reservations</a></li>
+					<li><a href="">Park Commission</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</nav>
+	
+	</div>
+<!-- 			<ul class="menu-button icon-menu"></ul> -->
+</header>
+
+				
+				
+				
+				<%= yield %>	
+				
+				
+				
+				
+<footer id="footer" class="group">
+    <ul class="adr">
+    	<li class="">&nbsp;</li>
+        <li class="street-address">&nbsp;</li>
+        <li><span class="locality">&nbsp; </span>
+        <span class="region">&nbsp; </span>
+        <span class="postal-code">&nbsp; </span></li>
+    </ul>
+	<nav>
+		<ul class="group">
+			<li><a href="">San Mateo County</a></li>
+			<li><a href="">Parks Department</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="">Site Map</a></li>
+			<li><a href="">Disclaimer</a></li>
+			<li><a href="">Privacy Policy</a></li>
+		</ul>
+	</nav>
+</footer>		
+</div>
 <script>
   document.write('<script src=' +
   ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
   '.js><\/script>')
 </script>
-
-	<!-- Included JS Files (Uncompressed) -->
-<!--
-	<script src="javascripts/foundation/jquery.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.forms.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
-	<script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
-	<script src="javascripts/foundation/jquery.placeholder.js"></script>
--->
-
-  <!-- Application Javascript, safe to override -->
-<!--   <script src="javascripts/foundation/app.js"></script> -->
-  <script src="javascripts/nlform.js"></script>
+<script src="javascripts/nlform.js"></script>
 <script>
 	var nlform = new NLForm( document.getElementById( 'nl-form' ) );
 </script>
-
+<script src="https://raw.github.com/redhotsly/simple-expand/master/src/simple-expand.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.expander').simpleexpand();
+    });
+</script>
+<script type="text/javascript" src="javascripts/jquery.flexnav.js"></script>
+<script>$(".flexnav").flexNav();</script>
 </body>
 </html>

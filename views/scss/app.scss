@@ -99,7 +99,6 @@ h1 {
 // Partials
 // ======================================================================== //
 
-@import "header";
 @import "nav"; // topbar navigation
 @import "footer"; // footer and brand menu
 @import "sidenav"; // sidenav only, seen on Boards and Committees
@@ -107,7 +106,6 @@ h1 {
 @import "teaser"; //use for teaser slabs throughout
 @import "widgets"; // specific detail page and page elements, often content type specfic
 @import "carousel";
-@import "calendar";
 /* @import "flexnav"; */
 
 
