@@ -27,23 +27,23 @@ class App < Sinatra::Base
   end
 
 get "/header" do
-erb :header, {:layout => :layoutproto}
+erb :header, {:layout => :layout}
 end 
 
 get "/events" do
-erb :eventsListing, {:layout => :layoutproto}
+erb :listingPage, {:layout => :layout}
 end 
 
-get "/subnav" do
-erb :subnav, {:layout => :layoutproto}
+get "/detail" do
+erb :subnav, {:layout => :layout}
 end 
 
 get "/home" do
-erb :home, {:layout => :layoutproto}
+erb :home, {:layout => :layout}
 end
 
 get "/search-results" do
-erb :searchResults, {:layout => :layoutproto}
+erb :searchResults, {:layout => :layout}
 end
 
   get "/stylesheets/*.css" do |path|
