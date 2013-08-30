@@ -46,6 +46,18 @@ get "/search-results" do
 erb :searchResults, {:layout => :layout}
 end
 
+get "/guide" do
+erb :guide, {:layout => :layoutGuide}
+end
+
+get "/guide-components" do
+erb :guideComp, {:layout => :layoutGuide}
+end
+
+get "/guide-elements" do
+erb :guideElem, {:layout => :layoutGuide}
+end
+
   get "/stylesheets/*.css" do |path|
     content_type "text/css", charset: "utf-8"
     scss :"scss/#{path}"
