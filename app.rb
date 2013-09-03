@@ -42,6 +42,10 @@ get "/home" do
 erb :home, {:layout => :layout}
 end
 
+get "/home-alert" do
+erb :homeAlert, {:layout => :layoutAlert}
+end
+
 get "/search-results" do
 erb :searchResults, {:layout => :layout}
 end

@@ -47,7 +47,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close, .icon-subnav, .menu-button, .icon-eye, .icon-filter, .icon-info, .icon-link, .icon-phone, .icon-location   {
+.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close, .icon-subnav, .menu-button, .icon-eye, .icon-filter, .icon-info, .icon-link, .icon-phone, .icon-location, .icon-feed   {
 	font-family: "SanMateoIcon";
 	speak: none;
 	font-style: normal;
@@ -72,6 +72,7 @@ you can use the generic selector below, but it's slower:
 .icon-link:before {content: "\e00a";}
 .icon-phone:before {content: "\e00b";}
 .icon-location:before {content: "\e00c";}
+.icon-feed:before {content: "\e00d";}
 
 body {
 	margin: auto;
@@ -147,6 +148,17 @@ dl dd, dl dt {
 	margin-bottom: 0;
 	}
 
+.alert {
+	background-color: $primaryBlue;
+	padding: .75em .5em;
+	display: block;text-align: center;
+/* 	box-shadow: inset 0px -5px 5px rgba($primaryGray, .2); */
+	border-bottom: 1px solid rgba($primaryBlue, .8);
+	span {color: #074a87; text-shadow: 0px 1px 1px rgba(white, .25); font-size: 2em; float: left; width: 100%; margin-bottom: 2%}
+	.alert-content { 
+		p {color: white; margin-bottom: 0; float:left; width: 100%; font-weight: bold; font-size: .85em;}
+		}
+}
 .county-name {
 	color: $primaryBlue;
 	font-size: 1.25em;
@@ -1398,6 +1410,17 @@ body {background-color: #fdfdfd;}
 		box-shadow: 0 3px 6px rgba($primaryGray, 0.1);
 		}
 	}
+.alert {
+	text-align: left;
+	z-index: -2;
+	padding: 0;
+	
+	.limiter {	padding: 1em 1em 0.6em;}
+
+	span {font-size: 2em; width: auto; margin-right: 2%; margin-bottom: 0;}
+	.alert-content { float:left; width: 80%; padding-top: .3em; z-index:3;
+		}
+}
 
 .main-body, header .inner {
 	max-width: 1120px;
@@ -1505,10 +1528,11 @@ li {color: $altPurple;}
 	background-color: $primaryBlue;
 	padding: 1em;
 	display: none;
+	position: relative;
 	
 	.close {
 		position: absolute; 
-		top: 1%; 
+		top: 3%; 
 		right: 3%; 
 		color: white; 
 		font-size: 1.5em;
@@ -2857,5 +2881,9 @@ footer {
 
 .touch-button {display: none;}
 #mti_wfs_colophon {display: none !important;}
-
+.limiter {
+	max-width: 1120px;
+	margin: auto;
+	position: relative;
+}
 
