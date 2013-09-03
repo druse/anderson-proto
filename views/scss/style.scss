@@ -18,6 +18,7 @@ $papabear: 960px;
 $light: "Trade Gothic W01 Light", Helvetica Neue, Arial, Helvetica;
 $reg: "Trade Gothic W01 Roman", Helvetica Neue, Arial, Helvetica;
 $bold:"Trade Gothic W01 Bold", Helvetica Neue, Arial, Helvetica;
+$lightOb: "TradeGothicW01-LightObl", Helvetica Neue, Arial, Helvetica;
 
 @font-face {
 	font-family: "SanMateoIcon";
@@ -148,6 +149,32 @@ dl dd, dl dt {
 	margin-bottom: 0;
 	}
 
+blockquote {
+	font-family: $lightOb;
+	font-size: 2em;
+	color: $primaryBlue;
+	margin: 0px;
+	padding: 0;
+	border-left: none;
+}
+
+table {
+	border: 1px solid rgba($primaryBlue, .1);
+	font-size: .85em;
+	border-radius: 3px;
+	th {
+		background-color: $primaryBlue; 
+		color: white;
+		font-family: $bold;
+		font-weight: 100;
+		text-transform: uppercase;
+		padding:.75em .75em 1em;
+		}
+	th:first-child {border-top-left-radius: 3px;}
+	th:last-child {border-top-right-radius: 3px;}
+	td {padding: .75em;}
+	tr:nth-child(2n+2) {background-color: rgba($primaryBlue, .05);}
+}
 .alert {
 	background-color: $primaryBlue;
 	padding: .75em .5em;
@@ -961,17 +988,17 @@ input:focus::-ms-input-placeholder {
 	background-color:#38939b;
 	}
 
-.button.secondary {
+.button.alt {
 	background-color: rgba(56, 147, 155, .95);
 	color: white;
 	}
 
-.button.secondary:hover {
+.button.alt:hover {
 	background-color: rgba(56, 147, 155, 1.0000);
 	color: white;
 	}
 
-.button.secondary:active {
+.button.alt:active {
 	background-color: rgba(56, 147, 155, .9);
 	color: white;
 	}
@@ -1078,11 +1105,15 @@ input:focus::-ms-input-placeholder {
 	right: 8%
 	}
 
-.button.small {
+.button.default {
 	font-size: .85em;
 	min-width: 170px;
 	padding: 1em;
 	}
+	
+.button.small {
+	padding-bottom: .75em;
+}
 
 .news {
 	width: 100%;
@@ -2533,7 +2564,7 @@ margin-bottom: 10%;}
 	font-size: 1em;
 	}
 
-.button.secondary {
+.button.alt {
 	margin-left: 0;
 	}
 	

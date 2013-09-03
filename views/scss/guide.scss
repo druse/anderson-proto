@@ -11,6 +11,7 @@ $altRed: #852432;
 $light: "Trade Gothic W01 Light", Helvetica Neue, Arial, Helvetica;
 $reg: "Trade Gothic W01 Roman", Helvetica Neue, Arial, Helvetica;
 $bold:"Trade Gothic W01 Bold", Helvetica Neue, Arial, Helvetica;
+$lightOb: "TradeGothicW01-LightObl", Helvetica Neue, Arial, Helvetica;
 
 /*
 .wrapper {
@@ -178,16 +179,28 @@ input[type="text"], textarea {
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 	border-radius: 3px;
-	font-family: 'Trade Gothic W01 Roman';
-	font-weight: 300;
-	background-color: white;	}
+	font-weight: normal;
+	background-color: white;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;}
 
-input[type=text]:focus {
+input[type="radio"], input[type="checkbox"] {
+	margin-right: .5em;
+}
+input[type=text]:focus, textarea:focus {
 	box-shadow: none;
-   	background-image: -webkit-linear-gradient(rgba(56, 147, 155, .7) 0%, rgba(56, 147, 155, .8) 100%);
-   	color: white;	
-   	font-family: 'Trade Gothic W01 Bold';
+	border-color: rgba($primaryBlue, 1);
+   	background-color: white;
+   	color: $primaryGray;
+   	font-weight: normal;
    	}
+   	
+form {
+	fieldset {border: 0; margin: 0; padding: 0;}
+	label {font-family: $bold; text-transform: uppercase; font-weight: 300; color: $primaryBlue;}
+	label.radio, label.checkbox {font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; font-weight: normal; color: $primaryGray; text-transform: none;}
+	li {list-style-type: none; padding-bottom: 1em;}
+	input[type="submit"] {min-width: inherit;}
+}
 
 .search input[type=search]:focus::-webkit-input-placeholder {color: white;}
 .search input[type=search]::-webkit-input-placeholder {color: #036cb6;}
@@ -218,7 +231,12 @@ dl dd {
 }
 
 .button, .btn {
-	min-width: auto;
+	min-width: inherit;
+}
+
+.secondary, .button.secondary {
+	min-width: inherit;
+	width: auto;
 }
 
 .news, .event-teaser {padding: 0;}
