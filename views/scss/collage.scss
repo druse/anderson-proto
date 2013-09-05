@@ -30,8 +30,8 @@ body {
 
 header {
 /* 	background: rgba(#eee, .3); */
-	padding: 2em 2em 2em;
-	margin: 0 0 10%;
+	padding: 2em;
+	margin: 10% 0 0%;
 	background-size: contain;
 	text-align: center;
 	
@@ -280,18 +280,18 @@ color: #fff;
 background-color:#38939b;
 }
 
-.button.secondary {
+.button.alt {
 	background-color: rgba(56, 147, 155, .95);
 	color: white;
 }
 
-.button.secondary:hover {
+.button.alt:hover {
 	background-color: rgba(56, 147, 155, 1.0000);
 	color: white;
 
 }
 
-.button.secondary:active {
+.button.alt:active {
 	background-color: rgba(56, 147, 155, .9);
 	color: white;
 
@@ -559,7 +559,7 @@ font-family: 'Trade Gothic W01 Bold';
 .section {
 	margin: 0 auto;
 	padding: 2em 1em 2em;
-	border-bottom: 3px solid #ddd;
+/* 	border-bottom: 3px solid #ddd; */
 }
 
 .seamless {padding: 0 0 0em;}
@@ -1245,3 +1245,5 @@ visibility: hidden;
 * html .group {height: 1%;}
 /* IE7 */
 *:first-child+html .group {min-height: 1px;}
+
+#mti_wfs_colophon {display: none !important;}
