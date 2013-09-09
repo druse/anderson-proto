@@ -23,6 +23,10 @@ class App < Sinatra::Base
   end
 
   get "/" do
+    erb :toc, {:layout => :layoutColl}
+  end
+  
+    get "/collage" do
     erb :collage, {:layout => :layoutColl}
   end
 

@@ -4,12 +4,17 @@
 $primaryBlue: #036cb6;
 $primaryTeal: #38939b;
 $primaryGray: #555a5a;
-
 $altBlue: #0d66a1;
 $altPurple: #6b699e;
 $altGreen: #8dc63f;
 $altOrange: #e98a41;
 $altRed: #852432;
+
+/* Fonts */
+$light: "Trade Gothic W01 Light", Helvetica Neue, Arial, Helvetica;
+$reg: "Trade Gothic W01 Roman", Helvetica Neue, Arial, Helvetica;
+$bold:"Trade Gothic W01 Bold", Helvetica Neue, Arial, Helvetica;
+$lightOb: "TradeGothicW01-LightObl", Helvetica Neue, Arial, Helvetica;
 
 body {
 	background-image: -webkit-linear-gradient(#fcffff 0%, /* #ffffff 50%, */ #fcffff 100%);
@@ -29,14 +34,40 @@ body {
 }
 
 header {
-/* 	background: rgba(#eee, .3); */
 	padding: 2em;
 	margin: 10% 0 0%;
 	background-size: contain;
 	text-align: center;
 	
+	h2 {color: $primaryTeal;
+	}	
 }
+.county-name, .dept-name {
+	display: inline-block;
+	padding: 0 .5em;
+	text-transform: uppercase;
+	}
+	
+.county-name, .dept-name {
+	display: block;
+	text-transform: uppercase;
+	text-shadow: 0px 1px 0px #fff;
+	}
 
+.county-name {
+	color: $primaryBlue;
+	font-size: 4em;
+	line-height: 1em;
+	font-family: 'Trade Gothic W01 Bold';
+    background-size: contain;
+    
+    span {
+		font-size: .6em;
+		font-family: 'Trade Gothic W01 Roman';
+		padding: 0 0.2em 0 0.1em;
+		}
+	}
+	
 .large-col {
 	width: 66%;
 	float: left;
@@ -1247,3 +1278,11 @@ visibility: hidden;
 *:first-child+html .group {min-height: 1px;}
 
 #mti_wfs_colophon {display: none !important;}
+
+.toc {
+	li {list-style-type: none; font-size: 2em; margin: 0px; padding: 0; display: block; background-color: rgba($primaryBlue, .05);
+		a {padding: .5em 1em; display: block; border-bottom: 1px solid white;}
+		a:after {content: none; }
+		a:hover:after {content: " »"}
+	}
+}
