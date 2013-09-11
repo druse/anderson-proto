@@ -48,7 +48,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close, .icon-subnav, .menu-button, .icon-eye, .icon-filter, .icon-info, .icon-link, .icon-phone, .icon-location, .icon-feed   {
+.icon-mag-glass-02, .icon-menu, .icon-arrow-down, .icon-home, .icon-arrow-down-iso, .icon-close, .icon-subnav, .menu-button, .icon-eye, .icon-filter, .icon-info, .icon-link, .icon-phone, .icon-location, .icon-feed,  .icon-facebook, .icon-twitter, .icon-flickr, .icon-vimeo, .icon-youtube, .icon-feed-2  {
 	font-family: "SanMateoIcon";
 	speak: none;
 	font-style: normal;
@@ -74,6 +74,24 @@ you can use the generic selector below, but it's slower:
 .icon-phone:before {content: "\e00b";}
 .icon-location:before {content: "\e00c";}
 .icon-feed:before {content: "\e00d";}
+.icon-facebook:before {
+	content: "\e00e";
+}
+.icon-twitter:before {
+	content: "\e00f";
+}
+.icon-flickr:before {
+	content: "\e010";
+}
+.icon-vimeo:before {
+	content: "\e011";
+}
+.icon-youtube:before {
+	content: "\e012";
+}
+.icon-feed-2:before {
+	content: "\e013";
+}
 
 body {
 	margin: auto;
@@ -1109,6 +1127,7 @@ input:focus::-ms-input-placeholder {
 	font-size: .85em;
 	min-width: 170px;
 	padding: 1em;
+	margin-bottom: 0;
 	}
 	
 .button.small {
@@ -1239,9 +1258,10 @@ input:focus::-ms-input-placeholder {
 }
 
 .secondary {
-	padding-right: 1em;
+	padding-right: 0em;
 	div {margin-bottom: 5%;}
-	.block {padding: 1em;}
+	.block {padding: 1em 1em 1em; border-top: 5px solid rgba($primaryBlue, .05);
+}
 	}
 
 .main-content {
@@ -1409,9 +1429,30 @@ ul.info {
 		
 	}
 
+.social-box { margin-bottom: 0;
+	li {list-style-type: none; float: left; margin: 0 5% 5% 0;
+		a {color: white; background-color: $primaryBlue; font-size: 1.25em; padding: .5em; border-radius: 3px; display: inline-block; line-height: 1; }
+		.icon-twitter {background-color: #55acee;}
+		.icon-facebook {background-color: #3b5998;}
+		.icon-feed-2 {background-color:#fd9a27}
+		.icon-flickr {background-color:#fc2482;}
+		.icon-vimeo {background-color:#2ebae9; }
+		.icon-youtube {background-color: #cc171e;}
+	}
+}
+
+
 @media only screen and (min-width: 480px) {
 	.wrapper > header {margin-bottom: 5%}
+
+	.social-box { 
+	li {margin: 0 5% 0% 0;
+			a {font-size: 1.5em; padding: .5em;}
+	}
 }
+
+}
+
 
 @media only screen and (max-width: 767px) {
 
@@ -2552,10 +2593,11 @@ footer {
 .secondary {
 	width: 27%;
 	margin-left: 3%;
+	padding-right: 1em;
 	
 	div {margin-bottom: 7%;}
 	
-	.block {padding: 0;
+	.block {padding: .5em 0 0;
 margin-bottom: 10%;}
 	
 	}
@@ -2906,6 +2948,15 @@ footer {
 	ul {padding-bottom: .75em;}
 	select {margin-bottom: 1.5em;}
 	}	
+	
+.social-box { margin-bottom: 0;
+	li {margin: 0 5% 5% 0;
+		a {font-size: 1em; padding: .5em;}
+
+	}
+}
+
+
 }
 
 

@@ -246,6 +246,12 @@ h1 {
 	span {color: $primaryTeal}
 }
 
-.btn-bar {
+.event {
+ margin-bottom: 0;
+}
 
+.social-box { margin-bottom: 0;
+	li {margin: 0 2.5% 2.5% 0;
+		a {font-size: 1em; padding: .5em;}
+	}
 }
