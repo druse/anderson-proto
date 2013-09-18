@@ -159,9 +159,10 @@ h2 {
 
 h3 {color: $primaryTeal; font-family: $light; text-transform: uppercase; margin-top: 0; font-weight: 100;}
 
-h4 {color: $primaryBlue; font-family: $reg; line-height: 1.3em; font-size: 1.25em;}
+h4 {color: $primaryBlue; font-family: $reg; line-height: 1.3em; font-size: 1.25em; margin-top: 0; font-weight: 300;}
 
-h5 {color: $primaryBlue; font-family: $bold;}
+h5 {color: $primaryBlue; font-family: $bold; font-weight: 300;
+}
 
 dl dd, dl dt {
 	margin-bottom: 0;
@@ -1259,7 +1260,9 @@ input:focus::-ms-input-placeholder {
 
 .secondary {
 	padding-right: 0em;
-	div {margin-bottom: 5%;}
+	div {margin-bottom: 5%;
+		h4 {color: $primaryTeal; text-transform: uppercase;}
+	}
 	.block {padding: 1em 1em 1em; border-top: 5px solid rgba($primaryBlue, .05);
 }
 	}
@@ -2597,7 +2600,7 @@ footer {
 	
 	div {margin-bottom: 7%;}
 	
-	.block {padding: .5em 0 0;
+	.block {padding: 0 0 0;
 margin-bottom: 10%;}
 	
 	}
