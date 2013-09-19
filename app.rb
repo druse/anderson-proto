@@ -66,6 +66,10 @@ get "/guide-elements" do
 erb :guideElem, {:layout => :layoutGuide}
 end
 
+get "/guide-layouts" do
+erb :guideLayouts, {:layout => :layoutGuide}
+end
+
   get "/stylesheets/*.css" do |path|
     content_type "text/css", charset: "utf-8"
     scss :"scss/#{path}"
