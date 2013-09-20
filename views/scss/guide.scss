@@ -37,6 +37,7 @@ html, body {
 }
 body {
 		background-color: #fafafa;
+		padding-bottom: 5em;
 }
 
 .wrapper {}
@@ -356,9 +357,111 @@ section.massive {
 	
 	.full {padding-left: 1em;
 		padding-right: 1em;
+		
+		h3 {font-family: $bold;}
 	}
 	
 	.guide-head {
 		padding-left: 1em;
 	}
+}
+
+.sidebar {
+	float: none;
+}
+.sidebar .dept-promo {
+margin-top: 0%;
+margin-bottom: 0%;
+display: block;
+background-color: 
+transparent;
+padding: 0;
+}
+
+.sidebar .dept-promo .dept-logo {
+background-color: rgba(85, 90, 90, 0.05);
+width: 100%;
+margin: auto;
+padding: 1em;
+display: block;
+}
+
+.sidebar .dept-promo .dept-logo img {
+width: 90%;
+display: block;
+margin: auto;
+}
+
+.sidebar .dept-promo p {
+float: left;
+width: 100%;
+font-size: 1em;
+color: #555a5a;
+font-family: "Trade Gothic W01 Roman", Helvetica Neue, Arial, Helvetica;
+padding: 1em 0;
+margin-bottom: 0;
+text-align: left;
+display: block;
+}
+
+.pagination {
+	margin-top: 0;
+}
+ul.paginaton {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.pagination li {
+  float: left;
+  margin-left: 0px;
+  border-top: 1px solid $primaryBlue;
+  border-right: 1px solid $primaryBlue;
+  border-bottom: 1px solid $primaryBlue;
+  list-style-type: none;
+  
+}
+
+ul.pagination li a {
+	background-color: rgba($primaryBlue, .9);
+	display: inline-block;
+	color: white;
+	padding: .5em 1em;
+}
+
+ul.pagination li a:hover {
+	background-color: $primaryBlue;
+}
+
+ul.pagination li.current {
+  padding: .5em 1em;
+  color: $primaryBlue;
+  background-color: white;
+}
+
+ul.pagination li:last-child, ul.pagination li:last-child a {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+ul.pagination li:first-child, ul.pagination li:first-child a {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+ul.pagination li:first-child a {
+  color: white;
+}
+
+input[type=file] {
+	background-color: rgba($primaryBlue, .05);
+	padding: 1em;
+	border-radius: 3px;
+	color: $primaryBlue;
+}
+
+.secondary {
+	float: none;
+	margin-left: 0;
 }

@@ -1453,7 +1453,7 @@ ul.info {
 	.wrapper > header {margin-bottom: 5%}
 
 	.social-box { 
-	li {margin: 0 5% 0% 0;
+	li {margin: 0 5% 5% 0;
 			a {font-size: 1.5em; padding: .5em;}
 	}
 }
@@ -2607,7 +2607,7 @@ footer {
 }
 	div {margin-bottom: 10%;}
 	
-	.block {padding: 0 0 0;
+	.block {padding: .5em 0 0;
 margin-bottom: 10%;}
 	
 	}
@@ -2722,6 +2722,7 @@ ul.info {
 }
 @media all and (min-width: 769px) {
 
+.wrapper > header {margin-bottom: 2%; }
 .filter-link, .main-body .close, .sub-link {display: none;}
 
 .event-filter, .search-filter {
