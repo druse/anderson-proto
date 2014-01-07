@@ -22,9 +22,12 @@ class App < Sinatra::Base
     set :scss, Compass.sass_engine_options
   end
 
-get "/home" do
-	erb :home, {:layout => :layout}
-end
+  get "/home" do
+  	erb :home, {:layout => :layout}
+  end
+  get '/about' do
+    erb :about
+  end
 
   get "/stylesheets/*.css" do |path|
     content_type "text/css", charset: "utf-8"

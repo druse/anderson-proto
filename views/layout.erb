@@ -13,10 +13,8 @@
 	<!-- Included CSS Files -->
 	<link rel="stylesheet" href="stylesheets/normalize.css" />
 	<link rel="stylesheet" href="stylesheets/app.css" />
-		<link rel="stylesheet" href="stylesheets/styles.css" />
+	<link rel="stylesheet" href="stylesheets/styles.css" />
 
-	<script src="javascripts/vendor/jquery.js"></script>
-	<script src="javascripts/foundation/modernizr.foundation.js"></script>
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -24,17 +22,103 @@
 </head>
 
 <body>
+  <header class="clearfix">
+    <div class="row">
+      <h1><a href="/" rel="home" title="Anderson Merchandisers" class="logo">Anderson Merchandisers</a></h1>
+    </div>
+    <div class="contain-to-grid">
+      <nav class="main-nav top-bar">
+        <ul class="title-area">
+          <li class="name"></li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="left" >
+            <li class="leaf"><a href="/" class="active">Home</a></li>
+            <li class="first expanded has-dropdown"><a href="#">Approach</a>
+              <ul class="dropdown">
+                <li><a href="#">Sub Menu Item</a></li>
+                <li><a href="#">Sub Menu Item</a></li>
+                <li><a href="#">Sub Menu Item</a></li>
+              </ul>
+            </li>
+            <li class="leaf"><a href="#" class="active">Services</a></li>
+            <li class="leaf"><a href="#">About</a></li>
+            <li class="leaf"><a href="#">Contact</a></li>
+            <li class="last leaf"><a href="#">Careers</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+  </header>
 
 <div class="wrapper">
 
-	<%= yield %>	
-							
-</div>
+	<%= yield %>
 
-<script>
+</div>
+  <footer>
+    <div class="row">
+        <div id="footer-first" class="large-4 columns">
+            <div class="block block-rms-core block-rms-core-footer-copyright">
+              © 2014 Anderson Merchandisers
+            </div>
+        </div>
+        <div id="footer-last" class="large-4 columns">
+        </div>
+      </div>
+    <div class="row">
+      <nav class="footer-nav">
+          <ul class="left" >
+            <li class="leaf"><a href="/" class="active">Home</a></li>
+            <li class="first expanded has-dropdown"><a href="#">Approach</a></li>
+            <li class="leaf"><a href="#" class="active">Services</a></li>
+            <li class="leaf"><a href="#">About</a></li>
+            <li class="leaf"><a href="#">Contact</a></li>
+            <li class="last leaf"><a href="#">Careers</a></li>
+          </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
   document.write('<script src=' +
   ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
   '.js><\/script>')
-</script>
+  </script>
+
+  <script src="javascripts/foundation/foundation.js"></script>
+<!--
+  <script src="javascripts/foundation/foundation.alerts.js"></script>
+
+  <script src="javascripts/foundation/foundation.clearing.js"></script>
+
+  <script src="javascripts/foundation/foundation.cookie.js"></script>
+
+  <script src="javascripts/foundation/foundation.dropdown.js"></script>
+
+  <script src="javascripts/foundation/foundation.forms.js"></script>
+
+  <script src="javascripts/foundation/foundation.joyride.js"></script>
+
+  <script src="javascripts/foundation/foundation.magellan.js"></script>
+
+  <script src="javascripts/foundation/foundation.orbit.js"></script>
+
+  <script src="javascripts/foundation/foundation.placeholder.js"></script>
+
+  <script src="javascripts/foundation/foundation.reveal.js"></script>
+
+  <script src="javascripts/foundation/foundation.section.js"></script>
+
+  <script src="javascripts/foundation/foundation.tooltips.js"></script>
+-->
+  <script src="javascripts/foundation/foundation.topbar.js"></script>
+
+
+  <script>
+    $(document).foundation();
+  </script>
+
 </body>
 </html>
