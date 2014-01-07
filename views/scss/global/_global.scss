@@ -1,0 +1,13 @@
+/**
+ * @file global/_global.scss
+ *
+ * \defgroup Amerch_SCSS_Global Globals
+ * \ingroup Amerch_SCSS
+ * \brief Global site style utilities and variables
+ */
+
+// -----------
+@import "mixins";
+@import "variables";
+@import "sprites";
+@import "fonts";
