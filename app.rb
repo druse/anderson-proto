@@ -22,52 +22,8 @@ class App < Sinatra::Base
     set :scss, Compass.sass_engine_options
   end
 
-  get "/" do
-    erb :guide, {:layout => :layoutGuide}
-  end
-  
-    get "/collage" do
-    erb :collage, {:layout => :layoutColl}
-  end
-
-get "/header" do
-erb :header, {:layout => :layout}
-end 
-
-get "/events" do
-erb :eventsListing, {:layout => :layout}
-end 
-
-get "/detail" do
-erb :detail, {:layout => :layout}
-end 
-
 get "/home" do
-erb :home, {:layout => :layout}
-end
-
-get "/home-alert" do
-erb :homeAlert, {:layout => :layoutAlert}
-end
-
-get "/search-results" do
-erb :searchResults, {:layout => :layout}
-end
-
-get "/guide" do
-erb :guide, {:layout => :layoutGuide}
-end
-
-get "/guide-components" do
-erb :guideComp, {:layout => :layoutGuide}
-end
-
-get "/guide-elements" do
-erb :guideElem, {:layout => :layoutGuide}
-end
-
-get "/guide-layouts" do
-erb :guideLayouts, {:layout => :layoutGuide}
+	erb :home, {:layout => :layout}
 end
 
   get "/stylesheets/*.css" do |path|
