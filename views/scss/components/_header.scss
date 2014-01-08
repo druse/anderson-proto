@@ -24,7 +24,9 @@
 }
 .top-bar-section {
   margin-top: 34px;
-
+  &.expanded {
+    margin-top: 0;
+  }
   li a:not(.button) {
     background: none;
     color: #0068b4;
@@ -53,5 +55,9 @@
   }
   .no-js .top-bar-section ul li:hover > a {
     background: #80b4da;
+  }
+  .has-dropdown > a:after {
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
+    top: 50%;
   }
 }
