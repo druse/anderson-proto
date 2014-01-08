@@ -5,3 +5,124 @@
  * \ingroup Amerch_SCSS_Global
  * \brief Fonts and Font Icons
  */
+
+
+// Font Icons
+@font-face {
+  font-family: 'amerch-icons';
+  src:url('/fonts/amerch-icons/amerch-icons.eot');
+  src:url('/fonts/amerch-icons/amerch-icons.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/amerch-icons/amerch-icons.woff') format('woff'),
+    url('/fonts/amerch-icons/amerch-icons.ttf') format('truetype'),
+    url('/fonts/amerch-icons/amerch-icons.svg#amerch-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'amerch-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-newspaper:before {
+  content: "\e600";
+}
+.icon-folder:before {
+  content: "\e601";
+}
+.icon-bubbles:before {
+  content: "\e602";
+}
+.icon-user:before {
+  content: "\e603";
+}
+.icon-key:before {
+  content: "\e604";
+}
+.icon-road:before {
+  content: "\e605";
+}
+.icon-numbered-list:before {
+  content: "\e606";
+}
+.icon-envelope:before {
+  content: "\e607";
+}
+.icon-info:before {
+  content: "\e608";
+}
+.icon-info2:before {
+  content: "\e609";
+}
+.icon-quotes-left:before {
+  content: "\e60a";
+}
+.icon-map:before {
+  content: "\e60b";
+}
+.icon-location:before {
+  content: "\e60c";
+}
+.icon-info:before {
+  content: "\e60d";
+}
+.icon-pie:before {
+  content: "\e61a";
+}
+.icon-bars:before {
+  content: "\e61e";
+}
+.icon-info2:before {
+  content: "\e60e";
+}
+.icon-info3:before {
+  content: "\e60f";
+}
+.icon-stats:before {
+  content: "\e61b";
+}
+.icon-group:before {
+  content: "\e610";
+}
+.icon-comments:before {
+  content: "\e611";
+}
+.icon-folder-open:before {
+  content: "\e612";
+}
+.icon-chevron-left:before {
+  content: "\e613";
+}
+.icon-chevron-right:before {
+  content: "\e614";
+}
+.icon-road:before {
+  content: "\e615";
+}
+.icon-quote-right:before {
+  content: "\e616";
+}
+.icon-chevron-sign-left:before {
+  content: "\e617";
+}
+.icon-chevron-sign-right:before {
+  content: "\e618";
+}
+.icon-info:before {
+  content: "\e619";
+}
+.icon-statistics:before {
+  content: "\e61c";
+}
+.icon-pie2:before {
+  content: "\e61d";
+}
