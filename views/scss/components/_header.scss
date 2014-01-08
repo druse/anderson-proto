@@ -6,3 +6,52 @@
  * \brief Theming for the top header of the site.
  */
 
+.top-bar .name h1 a {
+  @include replace-text('amerch-site-logo.png', 0);
+  height: 70px;
+  width: 330px;
+}
+.top-bar,
+.contain-to-grid {
+  background: transparent;
+}
+.contain-to-grid {
+  border-top: 4px solid #0068b4;
+}
+.no-js .top-bar-section ul li:hover > a {
+  background: #dfdfdf;
+  color: #0068b4;
+}
+.top-bar-section {
+  margin-top: 34px;
+
+  li a:not(.button) {
+    background: none;
+    color: #0068b4;
+    line-height: 40px;
+  }
+  ul {
+    background: none;
+  }
+  ul.dropdown li a {
+      background: #0068b4;
+      color: #fff;
+      line-height: normal;
+  }
+  .has-dropdown > a:after {
+    border-color: rgba(0, 104, 180, 0.5) transparent transparent transparent;
+    top: 50%;
+  }
+}
+.top-bar.expanded {
+  .title-area {
+    background: none;
+  }
+  .top-bar-section li a:not(.button) {
+    background: #0068b4;
+    color: #fff;
+  }
+  .no-js .top-bar-section ul li:hover > a {
+    background: #80b4da;
+  }
+}
