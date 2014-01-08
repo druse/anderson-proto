@@ -5,3 +5,45 @@
  * \ingroup Amerch_SCSS_Base
  * \brief Theming for the footer of the site.
  */
+
+footer {
+  background: $light-blue;
+  color: $light-blue;
+  text-align: center;
+  .block-location-list ul {
+     @include inline-block-list(1em);
+     li {
+      color: $light-grey;
+     }
+  }
+  .block {
+    padding-top: 1.2em;
+  }
+  .full-width {
+    background: $primary-blue;
+    border-bottom: 4px solid $primary-blue;
+  }
+}
+.block-rms-core-footer-copyright {
+  font-size: 14px;
+  padding-bottom: 1.2em;
+}
+.footer-nav {
+  display: block;
+  font-size: 20px;
+  padding: .5em 0;
+  @media screen and (max-width: 350px) {
+    font-size: 16px;
+  }
+  text-align: center;
+  ul {
+   @include inline-block-list(0);
+   a {
+    padding: 0 1em;
+   }
+ }
+ a {
+  color: #fff;
+ }
+}
+
