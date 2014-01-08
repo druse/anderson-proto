@@ -1147,7 +1147,7 @@ $topbar-bg: #0074A3;
 
 //// Height and margin
 
-// $topbar-height: 45px;
+$topbar-height: 65px;
 // $topbar-margin-bottom: emCalc(30px);
 
 //// Input height for top bar
@@ -1188,5 +1188,5 @@ $topbar-menu-icon-color-toggled: #aaa;
 //// Transitions and breakpoint styles
 
 // $topbar-transition-speed: 300ms;
-// $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
+ // $topbar-breakpoint: emCalc(640px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";

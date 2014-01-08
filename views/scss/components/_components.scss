@@ -1,0 +1,17 @@
+/**
+ * @file components/_components.scss
+ *
+ * \defgroup AllYou_SCSS_Components Components
+ * \ingroup AllYou_SCSS
+ * \brief Styling of individual site components.
+ */
+
+// Generic pieces
+@import 'components/header';
+@import 'components/footer';
+@import 'components/topnav';
+//@import 'components/flexslider';
+@import 'components/quote';
+
+// Bigger sections that might alter or implement the smaller pieces above
+@import 'components/homepage';
