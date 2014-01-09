@@ -1,0 +1,55 @@
+/**
+ * @file amerch/scss/base/_panel.scss
+ *
+ * \file amerch/scss/base/_panel.scss
+ * \ingroup Amerch_SCSS_Base
+ * \brief Theming for panels panes on the site.
+ */
+
+.panel-pane {
+  @include border-top-radius($radius-value);
+  @include box-shadow(0px 2.598px 5px 0px rgba( 71, 78, 96, .2 ));
+  background: #fff;
+  border-bottom: $border-primary;
+}
+.pane-title {
+  @include border-top-radius($radius-value);
+  color: white;
+  background: $primary-blue;
+  font-weight: normal;
+  font-size: 1.5em;
+  padding: 14px 20px;
+}
+.pane-content {
+  padding: 0 20px 20px;
+}
+
+// Featured Pane
+.featured-pane {
+  .pane-title {
+    background: $green;
+  }
+  border-color: $green;
+}
+
+// Image Featured Pane
+.pane--image-feature {
+  border-color: $light-blue;
+  margin-bottom: 1em;
+  .field-name-field-picture {
+    margin: 0 -20px;
+  }
+}
+
+// Quote Pane
+.pane-bundle-image-text-list {
+  @include border-top-radius(0);
+  @include box-shadow(none);
+  background: none;
+  border-bottom: none;
+
+  .pane-content {
+    padding: 0;
+  }
+}
+

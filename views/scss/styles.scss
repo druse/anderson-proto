@@ -18,7 +18,7 @@ h2 {
 
 h3 {
 	color: $primary-blue;
-	font-weight: 300;	
+	font-weight: 300;
 }
 
 p {
@@ -37,14 +37,14 @@ hr {
 	background-color: rgba($light-blue, .3);
 }
 
-.wrapper a:after { 
+.wrapper a:after {
 	content: " \00BB";
 }
 
 .wrapper {
 	ul {
 		li {
-			color:#389f76;	
+			color:#389f76;
 			list-style-position: inside;
 			padding-left: 1em;
 			font-size: .9em;
@@ -57,7 +57,7 @@ hr {
 	 margin-bottom: 5%;
 	 border-bottom: 2px solid $primary-blue;
 	 background-color: $primary-blue;
-	 
+
 	 img {
 		 margin: auto;
 		 width: 100%;
@@ -67,11 +67,11 @@ hr {
 .quotes {
 	width: 100%;
 	background-color: $primary-blue;
-	border-radius: 6px;
+	@include border-radius(6px);
 	color: white;
 	position: relative;
 	margin-bottom: 20%;
-	
+
 	.text {
 		p {
 			color: white;
@@ -79,13 +79,13 @@ hr {
 			padding: 1em;
 			margin-bottom: 0;
 		}
-		
+
 			}
 			.citation {
 			background-color: $light-blue;
 			padding: 1em;
 			margin-bottom: 10%;
-			
+
 			p {
 				padding: 0;
 				margin-bottom: 0;
@@ -102,7 +102,7 @@ hr {
 	position: absolute;
 	border-radius: 100px;
 	content: "\201D";
-	background-color: #fafafa;
+	background-color: #f4f4f4;
 	margin: auto;
 	color: #dfdfdf;
 	font-size: 72px;
@@ -128,7 +128,7 @@ height: 0;
 clear: both;
 visibility: hidden;
 }
-/* IE6 */ 
+/* IE6 */
 * html .group {height: 1%;}
 /* IE7 */
 *:first-child+html .group {min-height: 1px;}
@@ -139,13 +139,13 @@ visibility: hidden;
 	.quote {
 		float: left;
 		width: 60%;
-		
+
 		.text {
-			padding: 1em 0 0 2em;
+			padding: 1em 0 2.5em 2em;
 			p {font-size: 1.25em;}
 		}
 		.citation {
-		
+
 				position: absolute;
 				bottom: 0;
 				margin-bottom: 0;
@@ -153,20 +153,21 @@ visibility: hidden;
 				border-bottom-right-radius: 6px;
 				width: 100%;
 				z-index: 0;
-				
+
 			p {padding-left: 2em;
 				width: 100%;
 			}
 		}
-	
+
 	}
-	
+
 	img {
 		float: right;
 		width: 40%;
 		bottom: 0;
 		right: 0;
 		z-index: 2;
+    position: relative;
 	}
 }
 

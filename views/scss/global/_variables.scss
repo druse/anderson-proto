@@ -15,3 +15,9 @@ $text: #474e60;
 
 /* Typograpy */
 $font-stack: "ff-tisa-sans-web-pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+// Borders
+$border-base: 7px solid;
+$border-primary: $border-base $primary-blue;
+
+$radius-value: 6px;

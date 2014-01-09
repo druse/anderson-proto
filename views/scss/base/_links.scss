@@ -5,3 +5,12 @@
  * \ingroup Amerch_SCSS_Base
  * \brief Base styles for links.
  */
+
+.read-more {
+  font-weight: bold;
+  text-transform: capitalize;
+
+  &:after {
+    content: "»";
+  }
+}
