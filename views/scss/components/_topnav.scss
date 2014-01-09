@@ -11,8 +11,8 @@
   color: $primary-blue;
 }
 .top-bar-section {
-/*   margin-top: 34px; */
-  &.expanded {
+  // margin-top: 34px;
+  .expanded & {
     margin-top: 0;
   }
   li a:not(.button) {
@@ -28,6 +28,9 @@
       color: #fff;
       line-height: normal;
   }
+  li {
+    padding-left: 0;
+  }
   .has-dropdown > a:after {
     border-color: rgba(0, 104, 180, 0.5) transparent transparent transparent;
     top: 50%;
@@ -40,6 +43,8 @@
   .top-bar-section li a:not(.button) {
     background: $primary-blue;
     color: #fff;
+    border-bottom: 1px solid $light-blue;
+    line-height: inherit;
   }
   .no-js .top-bar-section ul li:hover > a {
     background: $light-blue;

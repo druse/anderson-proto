@@ -14,11 +14,29 @@ body
 h2 {
 	font-family: $font-stack;
 	color: $primary-blue;
+	font-size: 3em;
 }
 
+h2.page-title {
+	margin-bottom: 0;
+		margin: 0;
+	background-color: rgba($primary-blue, .05);
+	color: $primary-blue;
+	display: inline-block;
+	padding: .2em .5em .25em;
+	font-size: 2em;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
 h3 {
 	color: $primary-blue;
-	font-weight: 300;	
+	font-weight: 300;
+}
+
+h4 {color: $primary-blue;
+	font-size: 1.25em;
+	font-weight: 300;
+	margin-bottom: 3%;
 }
 
 p {
@@ -37,14 +55,14 @@ hr {
 	background-color: rgba($light-blue, .3);
 }
 
-.wrapper a:after { 
+.wrapper a:after {
 	content: " \00BB";
 }
 
-.wrapper {
+.field-wrapper {
 	ul {
 		li {
-			color:#389f76;	
+			color:#389f76;
 			list-style-position: inside;
 			padding-left: 1em;
 			font-size: .9em;
@@ -55,25 +73,34 @@ hr {
 
 .title-img {
 	 margin-bottom: 5%;
-	 border-bottom: 2px solid $primary-blue;
 	 background-color: $primary-blue;
-	 
+	 border-bottom: 6px solid $primary-blue;
+	 position: relative;
+
 	 img {
 		 margin: auto;
-		 width: 100%;
-		 max-width: 980px;
-		 display: block;
-	 }
+		 width: 100%;	
 }
 
+.title-img:after {
+/* 	border-bottom: 6px solid $primary-blue; */
+	position: absolute;
+	bottom: 0;
+	height: 1px;
+	background-color: white;
+	display: block;
+	width: 100%;
+	content: "";
+
+}
 .quotes {
 	width: 100%;
 	background-color: $primary-blue;
-	border-radius: 6px;
+	@include border-radius(6px);
 	color: white;
 	position: relative;
 	margin-bottom: 20%;
-	
+
 	.text {
 		p {
 			color: white;
@@ -81,13 +108,13 @@ hr {
 			padding: 1em;
 			margin-bottom: 0;
 		}
-		
+
 			}
 			.citation {
 			background-color: $light-blue;
 			padding: 1em;
 			margin-bottom: 10%;
-			
+
 			p {
 				padding: 0;
 				margin-bottom: 0;
@@ -104,7 +131,7 @@ hr {
 	position: absolute;
 	border-radius: 100px;
 	content: "\201D";
-	background-color: #fafafa;
+	background-color: #f4f4f4;
 	margin: auto;
 	color: #dfdfdf;
 	font-size: 72px;
@@ -130,7 +157,7 @@ height: 0;
 clear: both;
 visibility: hidden;
 }
-/* IE6 */ 
+/* IE6 */
 * html .group {height: 1%;}
 /* IE7 */
 *:first-child+html .group {min-height: 1px;}
@@ -141,13 +168,13 @@ visibility: hidden;
 	.quote {
 		float: left;
 		width: 60%;
-		
+
 		.text {
-			padding: 1em 0 0 2em;
+			padding: 1em 0 2.5em 2em;
 			p {font-size: 1.25em;}
 		}
 		.citation {
-		
+
 				position: absolute;
 				bottom: 0;
 				margin-bottom: 0;
@@ -155,20 +182,22 @@ visibility: hidden;
 				border-bottom-right-radius: 6px;
 				width: 100%;
 				z-index: 0;
-				
+
 			p {padding-left: 2em;
 				width: 100%;
 			}
 		}
-	
+
 	}
-	
+
 	img {
 		float: right;
 		width: 40%;
 		bottom: 0;
 		right: 0;
 		z-index: 2;
+    position: relative;
+    margin-bottom: 0;
 	}
 }
 
@@ -182,12 +211,19 @@ visibility: hidden;
 }
 
 @media (min-width: 768px) {
+
+header {
+	margin-bottom: 5%;
+}
+
 .large-12 > p {
 	font-size: 1.5em;
 }
 
 .title-img  {
-	margin-bottom: 2%;
+	margin-bottom: 0%;
+
+	img {}
 }
 
 .two-col-text {
@@ -198,7 +234,45 @@ visibility: hidden;
 }
 
 .columns {
-	margin-bottom: 3%;
+	margin-bottom: 2%;
 }
 
+.quotes {
+	margin-bottom: 0;
+}
+
+.top-bar .name h1 a {
+	width: 300px;
+}
+
+.top-bar-section ul > li a{
+	font-size: 1.25em;
+	font-weight: 300;
+}
+.top-bar-section {
+	margin-top: 1%;
+}
+
+.top-bar {
+	padding-top: 1em;
+}
+
+h2.page-title {
+	margin: 0;
+	background-color: rgba($primary-blue, .05);
+	color: $primary-blue;
+	display: inline-block;
+	padding: 0 .5em .1em;
+	font-size: 2.5em;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.page-intro {
+	font-size: 1em;
+}
+
+.large-12 .panel-pane {
+	margin-bottom: 0;
+}
 }
