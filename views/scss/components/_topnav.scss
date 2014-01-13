@@ -6,6 +6,10 @@
  * \brief Theming for the top nav menu of the site.
  */
 
+header {
+
+}
+
 .no-js .top-bar-section ul li:hover > a {
   background: $light-grey;
   color: $primary-blue;
@@ -17,7 +21,7 @@
   }
   li a:not(.button) {
     background: none;
-    color: $primary-blue;
+    color: white;
     line-height: 40px;
   }
   ul {
@@ -53,4 +57,14 @@
     border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
     top: 50%;
   }
+}
+
+@media (min-width: 768px) {
+
+.top-bar {
+	height: auto;
+	line-height: normal;
+	padding-top: 0;
+}
+
 }

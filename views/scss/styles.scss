@@ -151,6 +151,33 @@ hr {
 	position: relative;
 }
 
+.home-services {
+
+	li {
+		list-style-type: none;
+	
+	
+	span {
+		height: 60px;
+		display: block;
+				margin: 10px 0 20px;
+
+
+	}
+	h4 {
+		font-weight: bold;
+	}
+
+	img {
+		margin: auto;
+		display: block;
+		margin-bottom: 20px;
+		vertical-align: bottom;
+	}
+	}
+
+}
+
 /* =Clearfix (all browsers)
 --------------------------------*/
 .group:after {
@@ -256,9 +283,11 @@ header {
 	margin-top: 1%;
 }
 
+/*
 .top-bar {
 	padding-top: 1em;
 }
+*/
 
 h2.page-title {
 	margin: 0;
@@ -277,5 +306,5 @@ h2.page-title {
 
 .large-12 .panel-pane {
 	margin-bottom: 0;
-}
+	}
 }

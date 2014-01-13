@@ -22,9 +22,10 @@ class App < Sinatra::Base
     set :scss, Compass.sass_engine_options
   end
 
-  get "/home" do
+  get "/" do
   	erb :home, {:layout => :layout}
   end
+  
   get '/about' do
     erb :about
   end
