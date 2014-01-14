@@ -5,3 +5,23 @@
  * \ingroup Amerch_SCSS_Base
  * \brief Theming for the Homepage of the site.
  */
+
+.logo-panel {
+  border-bottom: none;
+  margin-bottom: 20px;
+  .pane-content {
+    padding: 0;
+  }
+}
+.logo-slider {
+  margin-bottom: 0;
+
+  li {
+    img {
+      margin-bottom: 0;
+    }
+    a:after {
+      content: "";
+    }
+  }
+}

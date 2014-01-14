@@ -93,6 +93,8 @@
     </div>
   </footer>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
   <script>
   document.write('<script src=' +
   ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
@@ -126,10 +128,52 @@
   <script src="javascripts/foundation/foundation.tooltips.js"></script>
 -->
   <script src="javascripts/foundation/foundation.topbar.js"></script>
+  <script defer src="javascripts/jquery.flexslider.js"></script>
 
 
   <script>
     $(document).foundation();
+
+    (function() {
+
+      // store the slider in a local variable
+      var $window = $(window),
+          flexslider;
+
+      // tiny helper function to add breakpoints
+      function getGridSize() {
+        return (window.innerWidth < 600) ? 2 :
+               (window.innerWidth < 900) ? 3 : 4;
+      }
+
+      $window.load(function() {
+        $('.logo-slider').flexslider({
+          animation: "slide",
+          slideshowSpeed: 3000,
+          animationSpeed: 400,
+          animationLoop: true,
+          itemWidth: 1500,
+          itemMargin: 5,
+          controlNav: false,
+          directionNav: false,
+          minItems: getGridSize(), // use function to pull in initial value
+          maxItems: getGridSize(), // use function to pull in initial value
+          start: function(slider){
+            $('body').removeClass('loading');
+            flexslider = slider;
+          }
+        });
+      });
+
+      // check grid size on resize event
+      $window.resize(function() {
+        var gridSize = getGridSize();
+
+        flexslider.vars.minItems = gridSize;
+        flexslider.vars.maxItems = gridSize;
+      });
+    }());
+
   </script>
 
 </body>

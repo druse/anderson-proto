@@ -10,6 +10,8 @@ footer {
   background: $light-blue;
   color: $light-blue;
   text-align: center;
+  margin-top: 20px;
+
   .block-location-list ul {
      @include inline-block-list(1em);
      li {
