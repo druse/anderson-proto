@@ -7,12 +7,14 @@
  */
 
 header {
-
+	border-top: 5px solid $primary-blue;
+	
 }
 
 .no-js .top-bar-section ul li:hover > a {
-  background: $light-grey;
-  color: $primary-blue;
+  background: $primary-blue;
+  color: #fafafa;
+/*   border-radius: 6px; */
 }
 .top-bar-section {
   // margin-top: 34px;
@@ -21,7 +23,7 @@ header {
   }
   li a:not(.button) {
     background: none;
-    color: white;
+    color: $primary-blue;
     line-height: 40px;
   }
   ul {
@@ -34,6 +36,11 @@ header {
   }
   li {
     padding-left: 0;
+  }
+  
+  .has-dropdown > a:hover {
+	  border-top-left-radius: 6px;
+	  border-top-right-radius: 6px;
   }
   .has-dropdown > a:after {
     border-color: rgba(0, 104, 180, 0.5) transparent transparent transparent;

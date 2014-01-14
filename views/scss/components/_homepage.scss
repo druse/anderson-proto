@@ -5,3 +5,190 @@
  * \ingroup Amerch_SCSS_Base
  * \brief Theming for the Homepage of the site.
  */
+
+.hero {
+	background: -webkit-linear-gradient(rgba(255,255,255, 0) 0%, rgba(0,0,0,1) 100%);
+	height: 480px;	
+	margin-bottom: 5%;
+	border-bottom: 5px solid $primary-blue;
+	padding-top: 80px;
+	position: relative;	
+	height: 600px;
+/*
+	img {
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+	}
+*/
+	
+	.title {
+			text-align: center;
+			width: 84%;
+			margin: 0px auto 80px; 
+	.highlight {
+		    display: inline;
+		    background: rgba($primary-blue, .9);
+		    color: white; 
+		    padding: 0.13em;
+		    padding-left: 0;
+		    padding-right: 0;
+		    box-shadow: 10px 0 0 rgba($primary-blue, .9), -10px 0 0 rgba($primary-blue, .9);
+		    text-align: center;
+		    font-weight: normal;
+		    font-size: 36px;
+		}
+	}
+	
+	> div > div {
+		width: 60%;
+		margin: auto;
+		background-color: rgba(0,0,0,.1);
+		padding: 1em 1.5em;
+		border-radius: 6px;
+	}
+	
+	blockquote {
+		float: left;
+		width: 400px;
+		color: white;
+		font-size: 24px;
+		line-height: 1.4em;
+		border-left: none;
+		margin: 0;
+		padding: 0;
+		text-shadow: 0px 2px 4px rgba(0,0,0, .3);
+/* 		font-weight: bold; */
+
+		
+		cite {
+			color: $light-blue;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: normal;
+			
+			&:before {
+				content: '';
+			}
+		}
+	}
+	
+	.home-hero-cta {
+		float: right;
+		width: 200px;
+		
+		a {
+			display: block;
+			margin-bottom: 20px;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@-webkit-keyframes cf3FadeInOut {
+   0% {
+     opacity:1;
+   }
+   25% {
+    opacity:1;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+   opacity:0;
+ }
+}
+
+@-moz-keyframes cf3FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 25% {
+  opacity:1;
+}
+75% {
+  opacity:0;
+}
+100% {
+ opacity:0;
+}
+}
+
+@-o-keyframes cf3FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 25% {
+  opacity:1;
+}
+75% {
+  opacity:0;
+}
+100% {
+ opacity:0;
+}
+}
+
+@keyframes cf3FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 25% {
+  opacity:1;
+}
+75% {
+  opacity:0;
+}
+100% {
+ opacity:0;
+}
+}
+
+#cf3 {
+position: absolute;
+width: 100%;
+margin: 0 auto;
+top: 0;
+z-index: -1;
+
+}
+
+
+#cf3 img {
+  position:absolute;
+  left:0;
+  width: 100%;
+overflow: hidden;
+}
+
+#cf3 img.top {
+  -webkit-animation-name: cf3FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-direction: alternate;
+
+  -moz-animation-name: cf3FadeInOut;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 15s;
+  -moz-animation-direction: alternate;
+
+  -o-animation-name: cf3FadeInOut;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 15s;
+  -o-animation-direction: alternate;
+
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  animation-direction: alternate;
+}

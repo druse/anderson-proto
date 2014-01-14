@@ -7,13 +7,13 @@
  */
 
 header {
-	background-color: $primary-blue;
+	background-color: #Eee;
 	padding: 0em 0;
 	margin-bottom: 5%;
 }
 
 .top-bar .name h1 a {
-  @include replace-text('amerch-site-logo-rev.png', 0);
+  @include replace-text('amerch-site-logo.png', 0);
   width: 200px;
   background-size: contain;
 }
