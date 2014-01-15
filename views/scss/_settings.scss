@@ -1188,5 +1188,5 @@ $topbar-menu-icon-color-toggled: #006392;
 //// Transitions and breakpoint styles
 
 // $topbar-transition-speed: 300ms;
- // $topbar-breakpoint: emCalc(640px); // Change to 9999px for always mobile layout
+$topbar-breakpoint: emCalc(760px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";

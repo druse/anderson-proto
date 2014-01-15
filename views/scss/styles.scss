@@ -79,7 +79,7 @@ hr {
 	 position: relative;
 
 	 img {
-		 margin: auto;	
+		 margin: auto;
 }
 }
 
@@ -124,7 +124,7 @@ hr {
 				font-weight: bold;
 				}
 		}
-		
+
 		img {margin-bottom: 0;}
 
 }
@@ -135,7 +135,7 @@ hr {
 	position: absolute;
 	border-radius: 100px;
 	content: "\201D";
-	background-color: #f4f4f4;
+	background-color: $site-background;
 	margin: auto;
 	color: #dfdfdf;
 	font-size: 72px;
@@ -156,8 +156,8 @@ hr {
 
 	li {
 		list-style-type: none;
-	
-	
+
+
 	span {
 		height: 60px;
 		display: block;
