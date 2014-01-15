@@ -38,4 +38,24 @@ header {
 	header {
 		padding: .5em 0;
 	}
+	
+	.top-bar {
+		.title-area {
+			width: 25%;
+		}
+		
+		.name h1 a {
+			width: 100%;
+		}
+	}
+	
+	.top-bar-section {
+		width: 75%;
+		float: left;
+		
+		ul > li a {
+			font-size: 1.1em;
+			font-weight: 300;
+		}
+	}
 }
