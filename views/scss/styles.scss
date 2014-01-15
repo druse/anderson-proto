@@ -29,8 +29,8 @@ h2.page-title {
 	border-top-right-radius: 6px;
 }
 h3 {
-	color: $primary-blue;
-	font-weight: 300;
+	color: $green;
+/* 	font-weight: 300; */
 }
 
 h4 {color: $primary-blue;
@@ -188,6 +188,19 @@ hr {
 			
 		}
 		
+	}
+	
+	@media screen and (min-width: 960px){
+		li {
+			span {
+				float: none;
+				width:auto;
+				margin: 10px 0 20px;
+			}
+			
+			
+		}
+
 	}
 
 }
