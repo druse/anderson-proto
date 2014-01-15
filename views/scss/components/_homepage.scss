@@ -48,7 +48,7 @@
 			text-align: center;
 			width: 84%;
 			margin: 0px auto 10px;
-			font-size: 20px;
+			font-size: 1.25em;
 			
 			@media screen and (min-width: 768px){
 				margin: 0px auto 80px;
@@ -101,6 +101,7 @@
 		border-top-left-radius: 6px;
 		border-top-right-radius: 6px;
 		text-align: center;
+		bottom: 0;
 
 		cite {
 			color: $light-blue;
@@ -133,7 +134,7 @@
 
 		a {
 			display: inline-block;
-			margin: 0 7% 0 0;
+			margin: 0 6.75% 0 0;
 			width: 46%;
 			margin-bottom: 0;
 			font-size: 1em;
@@ -163,6 +164,7 @@
 		}
 	}
 
+/* Image Transitions */
 @-webkit-keyframes cf3FadeInOut {
    0% {
      opacity:1;
