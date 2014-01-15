@@ -9,7 +9,11 @@
 header {
 	background-color: $site-background;
 	padding: 0em 0;
-	margin-bottom: 5%;
+	margin-bottom: 0%;
+}
+
+.top-bar .name h1 {
+	padding-left: .75em;
 }
 
 .top-bar .name h1 a {
@@ -21,8 +25,8 @@ header {
 .contain-to-grid {
   background: transparent;
 }
-.contain-to-grid {
 
+.contain-to-grid {
 }
 
 .contain-to-grid .top-bar {
@@ -31,11 +35,7 @@ header {
 
 
 @media (min-width: 768px) {
-
 	header {
 		padding: .5em 0;
 	}
-
-
-
 }
