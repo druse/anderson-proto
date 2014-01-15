@@ -36,7 +36,7 @@
 	border-bottom: 5px solid $primary-blue;
 	padding-top: 20px;
 	position: relative;
-	height: 440px;
+	height: 450px;
 	overflow: hidden;
 	
 	@media screen and (min-width: 768px){
@@ -95,14 +95,17 @@
 		line-height: 1.4em;
 		border-left: none;
 		margin: 0;
-		padding: .5em 1em;
+		padding: .75em 1em .75em;
 		text-shadow: 0px 2px 4px rgba(0,0,0, .3);
 		background-color: rgba(0,0,0,.1);
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		text-align: center;
 
 		cite {
 			color: $light-blue;
 			text-transform: uppercase;
-			font-size: 12px;
+			font-size: 11px;
 			font-style: normal;
 			font-weight: normal;
 
@@ -115,6 +118,7 @@
 			width: 400px;
 			font-size: 24px;
 			padding: 0;
+			text-align: left;
 			
 			cite {
 				font-size: 14px;
@@ -125,11 +129,11 @@
 	.home-hero-cta {
 		float: left;
 		width: 100%;
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 
 		a {
 			display: inline-block;
-			margin: 0 8% 0 0;
+			margin: 0 7% 0 0;
 			width: 46%;
 			margin-bottom: 0;
 			font-size: 1em;
