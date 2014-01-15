@@ -161,6 +161,7 @@ hr {
 
 	li {
 		list-style-type: none;
+		text-align: center;
 
 
 	span {
@@ -184,6 +185,7 @@ hr {
 	@media screen and (min-width: 768px){
 		
 		li {
+			text-align: left;
 			span {
 				float: left;
 				width: 20%;
