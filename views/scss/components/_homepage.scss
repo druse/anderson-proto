@@ -433,7 +433,9 @@
 		margin-bottom: 40px;
 		
 		@media screen and (min-width: 768){
+			.slides {
 			padding-bottom: 20px;
+			}
 		}
 			
 		.slide-content {
