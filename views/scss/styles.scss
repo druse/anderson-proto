@@ -17,7 +17,8 @@ h2 {
 	font-size: 3em;
 }
 
-h2.page-title {
+
+.page-title h2 {
 	margin-bottom: 0;
 	margin: 0;
 	background-color: rgba($primary-blue, .05);
@@ -80,6 +81,7 @@ hr {
 
 	 img {
 		 margin: auto;
+		 width: 100%;
 }
 }
 
@@ -186,6 +188,10 @@ hr {
 				float: left;
 				width: 20%;
 				margin: 10px 20px 20px 0;
+				
+				img {
+					margin-top: 0;
+				}
 			}
 			
 			
@@ -199,6 +205,10 @@ hr {
 				float: none;
 				width:auto;
 				margin: 10px 0 20px;
+				
+				img {
+					margin-top: 20px;
+				}
 			}
 			
 			
@@ -206,6 +216,10 @@ hr {
 
 	}
 
+}
+
+.page-title {
+	margin: 20px auto 0;
 }
 
 /* =Clearfix (all browsers)
@@ -281,9 +295,9 @@ header {
 }
 
 .title-img  {
-	margin-bottom: 0%;
+	margin-bottom: 2%;
 
-	img {}
+	img {width: 100%;}
 }
 
 .two-col-text {
@@ -311,7 +325,7 @@ header {
 }
 */
 
-h2.page-title {
+.page-title h2 {
 	margin: 0;
 	background-color: rgba($primary-blue, .05);
 	color: $primary-blue;
@@ -343,4 +357,9 @@ h2.page-title {
 .row {
 	margin-bottom: 30px;
 }
+
+.page-title {
+	margin: 20px auto 0;
+}
+
 }

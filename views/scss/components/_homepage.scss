@@ -181,12 +181,22 @@
 			width: 46%;
 			margin-bottom: 0;
 			font-size: 1em;
-			border: 0;
 
 			&:last-child {
 				margin-right: 0;
 				}
+				
+			&:not(.secondary) {
+				background-color: #fafafa;
+				color: $primary-blue;
+				border-color: #eee;
+				
+				&:hover {
+					color: lighten($primary-blue, 10%);
+				}
 			}
+			}
+			
 			
 		@media screen and (min-width: 768px){
 			float: none;
