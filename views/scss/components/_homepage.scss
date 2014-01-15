@@ -431,6 +431,10 @@
 		border: none;
 		box-shadow: none;
 		margin-bottom: 40px;
+		
+		@media screen and (min-width: 768){
+			padding-bottom: 20px;
+		}
 			
 		.slide-content {
 			padding: 0;
