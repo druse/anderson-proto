@@ -25,7 +25,11 @@ class App < Sinatra::Base
   get "/" do
   	erb :home, {:layout => :layout}
   end
-  
+
+  get "/home-alt" do
+    erb :home_alt, {:layout => :layout}
+  end
+
   get '/about' do
     erb :about
   end
