@@ -397,12 +397,12 @@
 	.pane-title {
 		text-align: center;
 		font-weight: bold;
-		background-color: #fafafa;
+		background-color: transparent;
 		border-radius: 0;
 		padding-top: .5em;
 		margin: 0 0 20px;
-		color: $primary-blue;
-		box-shadow: 0px 4px 4px rgba(0,0,0,.05);
+		color: #fafafa;
+/* 		box-shadow: 0px 4px 4px rgba(0,0,0,.05); */
 		
 		@media screen and (min-width: 768px){
 			margin-bottom: 0;
@@ -452,13 +452,14 @@
 			}
 			
 			h4 {
-				color: white;
+				color: #8ccdff;
 				font-weight: bold;
 				font-size: 1.5em;
 				
 				@media screen and (min-width: 768px) {
-					font-size: 2em;
+					font-size: 1.5em;
 					margin-bottom: 2%;
+					color: #8ccdff;
 					}
 			}
 			
