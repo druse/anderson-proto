@@ -123,7 +123,7 @@
 	blockquote {
 		float: left;
 		width: 100%;
-		color: white;
+		color: #eee;
 		font-size: 14px;
 		line-height: 1.4em;
 		border-left: none;
@@ -397,11 +397,11 @@
 	.pane-title {
 		text-align: center;
 		font-weight: bold;
-		background-color: transparent;
+		background-color: #fafafa;
 		border-radius: 0;
 		padding-top: .5em;
 		margin: 0 0 20px;
-		color: #fafafa;
+		color: $primary-blue;
 /* 		box-shadow: 0px 4px 4px rgba(0,0,0,.05); */
 
 		@media screen and (min-width: 768px){
@@ -507,16 +507,17 @@
   }
 
   @media screen and (min-width: 960px){
-    padding-top: 60px;
+    padding-top: 140px;
     height: 350px;
   }
 }
+
 .hero-alt-title {
   background: $primary-blue;
   .title {
     text-align: center;
     font-size: 1.25em;
-    padding: 10px;
+    padding: 1em;
     margin-bottom: 0;
   }
   .highlight{
@@ -538,4 +539,38 @@
   .columns {
     margin-bottom: 0;
   }
+}
+
+@media screen and (min-width: 960px){
+.hero-new {
+	padding-top: 0;
+	height: 530px;
+
+	.title {
+		background-color: rgba($primary-blue, .975);
+		padding: 1em;
+		margin: 0 auto 160px;
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+		
+		.highlight {
+			box-shadow: none;
+			background-color: transparent;
+			line-height: 1.5em;
+			font-size: 30px;
+		}
+	}
+	
+	> div > div {
+		
+	}
+	
+	.home-hero-cta {
+		margin-bottom: 0;
+	}
+	
+	blockquote {
+		font-weight: 800;
+	}
+}
 }

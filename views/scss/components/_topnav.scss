@@ -12,9 +12,13 @@ header {
 }
 
 .no-js .top-bar-section ul li:hover > a {
-  background: $primary-blue;
-  color: #fafafa;
-/*   border-radius: 6px; */
+  background: rgba($primary-blue, .1);
+  color: $primary-blue;
+  border-radius: 6px;
+}
+.no-js .top-bar-section ul li.has-dropdown:hover > a {
+	  border-bottom-left-radius: 0px;
+	  border-bottom-right-radius: 0px;
 }
 .top-bar-section {
   // margin-top: 34px;
@@ -25,22 +29,48 @@ header {
     background: none;
     color: $primary-blue;
     line-height: 40px;
+    font-weight: 800;
   }
   ul {
     background: none;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
   }
+  
+  .dropdown {background: #fafafa;
+	  box-shadow: 0px 4px 4px rgba(#222, .3);
+	  
+	  li:nth-child(2) a:hover {
+		  	 border-top-left-radius: 6px;
+		  	  }
+	li:last-child a:hover{
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+	}
+	  
+  }
+  
   ul.dropdown li a {
-      background: $primary-blue;
-      color: #fff;
-      line-height: normal;
-  }
+      
+      color: $primary-blue;
+      line-height: 1.6em;
+      font-weight: 400;
+      
+      &:hover {
+	      background-color: $light-blue;
+	      border-radius: 0;
+	      color: white;
+      }
+   }
+  
   li {
     padding-left: 0;
   }
   
   .has-dropdown > a:hover {
-	  border-top-left-radius: 6px;
-	  border-top-right-radius: 6px;
+	  border-bottom-left-radius: 0px;
+	  border-bottom-right-radius: 0px;
   }
   .has-dropdown > a:after {
     border-color: rgba(0, 104, 180, 0.5) transparent transparent transparent;
@@ -52,13 +82,18 @@ header {
     background: none;
   }
   .top-bar-section li a:not(.button) {
-    background: $primary-blue;
+    background: $light-blue;
     color: #fff;
     border-bottom: 1px solid $light-blue;
     line-height: inherit;
   }
   .no-js .top-bar-section ul li:hover > a {
     background: $light-blue;
+  }
+  
+  .has-dropdown > a{
+	  border-top-left-radius: 6px;
+	  border-top-right-radius: 6px;
   }
   .has-dropdown > a:after {
     border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);

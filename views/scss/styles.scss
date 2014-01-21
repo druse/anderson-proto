@@ -37,7 +37,7 @@ h3 {
 
 h4 {color: $primary-blue;
 	font-size: 1.25em;
-	font-weight: 300;
+	font-weight: 400;
 	margin-bottom: 3%;
 }
 
@@ -337,13 +337,15 @@ header {
 
 .page-title h2 {
 	margin: 0;
-	background-color: rgba($primary-blue, .05);
+	background-color: rgba($primary-blue, .025);
 	color: $primary-blue;
-	display: inline-block;
+	display: block;
 	padding: .15em .65em;
 	font-size: 2.5em;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
+	text-align: center;
+	font-weight: 400;
 }
 
 .page-intro {
