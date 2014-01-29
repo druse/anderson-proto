@@ -83,3 +83,13 @@
   }
 }
 
+// Hack to set Solutions/Services panels as same height
+@media (min-width: 1020px) {
+	.page-about {
+		.large-6 {
+			.panel-pane {
+				min-height: 580px;
+			}
+		}
+	}
+}
